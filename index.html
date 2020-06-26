@@ -273,7 +273,7 @@
                     <a href="#assess-edition-1-result-codes" class="toc-h2 toc-link" data-title="Result codes">Result codes</a>
                   </li>
                   <li>
-                    <a href="#assess-edition-1-email-hippo-trust-score-in-assess" class="toc-h2 toc-link" data-title="Email Hippo Trust Score in ASSESS">Email Hippo Trust Score in ASSESS</a>
+                    <a href="#assess-edition-1-email-hippo-trust-score" class="toc-h2 toc-link" data-title="Email Hippo Trust Score">Email Hippo Trust Score</a>
                   </li>
                   <li>
                     <a href="#assess-edition-1-net-client-libraries" class="toc-h2 toc-link" data-title=".Net client libraries">.Net client libraries</a>
@@ -293,7 +293,7 @@
                     <a href="#frequently-asked-questions-will-i-get-blocklisted-using-your-apis" class="toc-h2 toc-link" data-title="Will I get blocklisted using your APIs?">Will I get blocklisted using your APIs?</a>
                   </li>
                   <li>
-                    <a href="#frequently-asked-questions-will-anyone-know-that-i-am-querying-a-domain-or-an-email-address" class="toc-h2 toc-link" data-title="Will anyone know that I am querying a domain or an email address?">Will anyone know that I am querying a domain or an email address?</a>
+                    <a href="#frequently-asked-questions-will-anyone-know-that-i-am-querying-an-email-address-a-domain-or-an-ip-address" class="toc-h2 toc-link" data-title="Will anyone know that I am querying an email address, a domain or an ip address?">Will anyone know that I am querying an email address, a domain or an ip address?</a>
                   </li>
                   <li>
                     <a href="#frequently-asked-questions-how-do-i-call-your-apis" class="toc-h2 toc-link" data-title="How do I call your APIs?">How do I call your APIs?</a>
@@ -308,16 +308,7 @@
                     <a href="#frequently-asked-questions-can-i-get-my-usage-in-real-time" class="toc-h2 toc-link" data-title="Can I get my usage in real-time?">Can I get my usage in real-time?</a>
                   </li>
                   <li>
-                    <a href="#frequently-asked-questions-how-does-the-more-api-work" class="toc-h2 toc-link" data-title="How does the MORE API work?">How does the MORE API work?</a>
-                  </li>
-                  <li>
-                    <a href="#frequently-asked-questions-how-does-the-whois-api-work" class="toc-h2 toc-link" data-title="How does the WHOIS API work?">How does the WHOIS API work?</a>
-                  </li>
-                  <li>
                     <a href="#frequently-asked-questions-what-comes-back-from-the-api" class="toc-h2 toc-link" data-title="What comes back from the API?">What comes back from the API?</a>
-                  </li>
-                  <li>
-                    <a href="#frequently-asked-questions-can-your-email-validation-apis-find-spam-traps" class="toc-h2 toc-link" data-title="Can your email validation APIs find spam traps?">Can your email validation APIs find spam traps?</a>
                   </li>
               </ul>
           </li>
@@ -439,7 +430,7 @@
       <div class="content">
         <p><img src="images/HeaderImage.png" alt="Email Hippo Technical Documentation" /></p>
 <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the home of Email Hippo technical documents. From here you can access full information about all our APIs, view code in multiple languages and get started with your own integration. </p>
+<p>Welcome to the home of Email Hippo technical documents for our ASSESS API. From here you can access full information about the API, view code in multiple languages and get started with your own integration. </p>
 <h1 id='about-email-hippo'>About Email Hippo</h1>
 <p>Email Hippo is an email intelligence and data services provider that’s trusted by thousands of businesses and holds international security accreditations.</p>
 
@@ -478,14 +469,15 @@
 <p><strong>Common features:</strong></p>
 
 <ul>
-<li><p><strong>Progressive verification</strong> using multiple verification processes including:</p>
+<li><strong>Progressive verification</strong> using multiple verification processes including:
 
 <ul>
 <li>Syntax checking</li>
 <li>DNS checking</li>
 <li>Block-list checking (e.g. spamhaus)</li>
 <li>Web infrastructure checking</li>
-<li>Mailbox checking<br></li>
+<li>Mailbox checking<br>
+<p>&nbsp;</p></li>
 </ul></li>
 <li><p><strong>Unrivalled coverage</strong> - Email Hippo leverages the advantages of its scalable infrastructure to provide coverage of domains that are technically challenging. Consumer facing domains tend to be more challenging to cover then business facing domains B2C domains.</p></li>
 <li><p><strong>Disposable email address detection</strong> - Unrivalled disposable email address detection built on Email Hippo’s proprietary multi-vector real-time analysis:</p>
@@ -493,20 +485,19 @@
 <ul>
 <li>Real-time detection of disposable email address providers that employ obfuscation techniques (e.g. rotating domains, IP addresses and MX servers)</li>
 <li>Checking against static lists<br>
-&amp;nbsp<br></li>
+<p>&nbsp;</p><br></li>
 </ul></li>
 <li><p><strong>Gibberish detection</strong></p>
 
 <ul>
 <li>A common vector for persons wishing to remain anonymous is to register or use a pre-existing domain. Finding an available domain is not easy and as such, many opt for a ‘Gibberish’ domain such as <code>sdfre45321qaxc.com</code>.</li>
-<li>Email Hippo detects gibberish in both the user and domain elements of an email address.</li>
+<li>Email Hippo detects gibberish in both the user and domain elements of an email address.
+<p>&nbsp;</p></li>
 </ul></li>
 <li><p><strong>Domain age</strong> - Email Hippo&#39;s WHOIS service contributes valuable domain age information to help evaluate the credibility of domains.</p></li>
 <li><p><strong>IP address</strong> - Email Hippo digs into the IP address to understand its origin and reputation.</p></li>
-<li><p><strong>Proprietary scoring and risk assessment</strong></p></li>
+<li><p><strong>Proprietary scoring and risk assessment</strong> - All the information is wrapped into our Hippo Trust Score. A simple score between 0 and 10 rates your visitor so you can decide whether and how you treat your visitor.</p></li>
 </ul>
-
-<p>All the information is wrapped into our Hippo Trust Score. A simple score between 0 and 10 rates your visitor so you can decide whether and how you treat your visitor.</p>
 <p><a name="assessv1"></a></p>
 <h1 id='assess-edition-1'>ASSESS Edition 1</h1><h2 id='assess-edition-1-specification'>Specification</h2>
 <table><thead>
@@ -900,13 +891,10 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 Select the JSON tab to view the schema in JSON.
 </aside>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"licenseKey"</span><span class="p">:</span><span class="s2">"string"</span><span class="p">,</span><span class="w"> 
   </span><span class="nl">"quotaUsed"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"quotaRemaining"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"nextQuotaResetDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09T10:26:42Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"reportedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09T10:26:42Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"errorSummary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">  
+  </span><span class="nl">"reportedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09T10:26:42Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <table><thead>
@@ -918,20 +906,6 @@ Select the JSON tab to view the schema in JSON.
 <th>Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>accountId</td>
-<td>integer(int32)</td>
-<td>false</td>
-<td>none</td>
-<td>none</td>
-</tr>
-<tr>
-<td>licenseKey</td>
-<td>string</td>
-<td>false</td>
-<td>none</td>
-<td>none</td>
-</tr>
 <tr>
 <td>quotaUsed</td>
 <td>integer(int64)</td>
@@ -956,13 +930,6 @@ Select the JSON tab to view the schema in JSON.
 <tr>
 <td>reportedDate</td>
 <td>datetime</td>
-<td>false</td>
-<td>none</td>
-<td>none</td>
-</tr>
-<tr>
-<td>errorSummary</td>
-<td>string</td>
 <td>false</td>
 <td>none</td>
 <td>none</td>
@@ -1230,7 +1197,9 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 <li><p>Protobuf &emsp; <code>GET //api.hippoassess.com/v1/proto/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
 </ul>
 
-<p><em>GET email verification result.</em></p>
+<p>&nbsp;</p>
+
+<p><em>GET ASSESS result.</em></p>
 <h3 id='assess-edition-1-endpoint-get-assess-result-parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1959,7 +1928,7 @@ Select the JSON tab to view the schema in JSON.
 </tbody></table>
 
 <p><a name="assessprimarycodes"></a></p>
-<h2 id='assess-edition-1-result-codes'>Result codes</h2><h3 id='assess-edition-1-result-codes-primary-result-codes'>Primary result codes</h3>
+<h2 id='assess-edition-1-result-codes'>Result codes</h2><h3 id='assess-edition-1-result-codes-primary-mailbox-result-codes'>Primary mailbox result codes</h3>
 <table><thead>
 <tr>
 <th>Primary code</th>
@@ -1985,7 +1954,7 @@ Select the JSON tab to view the schema in JSON.
 </tbody></table>
 
 <p><a name="assesshippoTrust"></a></p>
-<h2 id='assess-edition-1-email-hippo-trust-score-in-assess'>Email Hippo Trust Score in ASSESS</h2>
+<h2 id='assess-edition-1-email-hippo-trust-score'>Email Hippo Trust Score</h2>
 <p>The Trust Score provides an ‘at a glance’ determination of quality; drilling deeper than just the email address itself.</p>
 
 <p>The Email Hippo Trust Score is designed to answer a fundamental question posed from the perspective of a business owner, merchant, data broker or lead generation service:</p>
@@ -1997,7 +1966,7 @@ Select the JSON tab to view the schema in JSON.
 <p>The Trust Score takes dozens of metrics and signals into consideration when making this assessment and providing the final score.</p>
 
 <p><a name="assessservicetypes"></a></p>
-<h3 id='assess-edition-1-email-hippo-trust-score-in-assess-email-infrastucture-identifier'>Email Infrastucture identifier</h3>
+<h3 id='assess-edition-1-email-hippo-trust-score-email-infrastucture-identifier'>Email Infrastucture identifier</h3>
 <table><thead>
 <tr>
 <th>Code</th>
@@ -2057,7 +2026,7 @@ Select the JSON tab to view the schema in JSON.
 <p>Great question. Yes, of course - see our <a href="https://www.emailhippo.com/compliance/">Compliance pages</a> for detailed information.</p>
 <h2 id='frequently-asked-questions-will-i-get-blocklisted-using-your-apis'>Will I get blocklisted using your APIs?</h2>
 <p>No. It’s Email Hippo infrastructure that does the work.</p>
-<h2 id='frequently-asked-questions-will-anyone-know-that-i-am-querying-a-domain-or-an-email-address'>Will anyone know that I am querying a domain or an email address?</h2>
+<h2 id='frequently-asked-questions-will-anyone-know-that-i-am-querying-an-email-address-a-domain-or-an-ip-address'>Will anyone know that I am querying an email address, a domain or an ip address?</h2>
 <p>No. It’s Email Hippo infrastructure that does the work.</p>
 <h2 id='frequently-asked-questions-how-do-i-call-your-apis'>How do I call your APIs?</h2>
 <p>For a JSON response, make a simple GET request to the endpoint.</p>
@@ -2080,42 +2049,18 @@ Select the JSON tab to view the schema in JSON.
 </tr>
 </thead><tbody>
 <tr>
-<td>MORE Edition 1/V2</td>
+<td>ASSESS Edition 1/V1</td>
 <td>Up to 30 days</td>
-</tr>
-<tr>
-<td>MORE Edition 2/V3</td>
-<td>Up to 30 days</td>
-</tr>
-<tr>
-<td>WHOIS Edition 1/V1</td>
-<td>Up to 90 days (depends on domain expiry in the WHOIS record).</td>
 </tr>
 </tbody></table>
 
 <p>No personally identifiable information is stored in our cache infrastructure.</p>
 <h2 id='frequently-asked-questions-can-i-get-my-usage-in-real-time'>Can I get my usage in real-time?</h2>
-<p>Usage is available in the customer portal or for MORE Edition 2/V3 use the quota API.</p>
-<h2 id='frequently-asked-questions-how-does-the-more-api-work'>How does the MORE API work?</h2>
-<p>At a basic conceptual level, the process of verifying email addresses is very simple. Google for “Send email using telnet” for a quick and general overview of how it’s done. To verify an email address without sending an email, simply go as far as the “RCPT TO” stage and parse the response code. That’s the easy bit and can be accomplished in just a couple of dozen lines of a PHP script.</p>
-
-<p>The hard bit is dealing with mail services that are intrinsically configured to work against the process of email verification or any similar <a href="#glossary-smtp">SMTP</a> based activity. The reason that any email / SMTP process is difficult from a client perspective is that mail services need to protect themselves from an ever increasing landscape of abuse including spam and <a href="#glossary-ddos">DDoS</a> attacks.</p>
-
-<p>Email Hippo‘s strength in dealing with the “hard bit” of email verification comes from years of experience in doing email verification together with our complete ownership of our SMTP verification software stack together with an extensive cloud based infrastructure. That’s why Email Hippo can do the “hard bits” best and offer outstanding coverage on the more technically challenging, dynamic domains.</p>
-<h2 id='frequently-asked-questions-how-does-the-whois-api-work'>How does the WHOIS API work?</h2>
-<p>At a basic conceptual level, the process of querying WHOIS services is very simple. First, find the authoritative WHOIS server for a particular TLD. Next, connect to the server on port 43, query the domain and capture the response.</p>
-
-<p>The hard bit is dealing with WHOIS services that are intrinsically configured to work against the process of querying domains in any form large volume scale. Additionally, the WHOIS system does not follow one, unified standard which means that the data returned from WHOIS services is very difficult to parse to anything that is useful for automation or integration purposes.</p>
-
-<p>Email Hippo’s strength in dealing with the “hard bit” of the WHOIS system comes from years of experience in solving similar challenges in email verification.</p>
+<p>Usage is available in the Hippo World customer portal or through the ASSESS quota API.</p>
 <h2 id='frequently-asked-questions-what-comes-back-from-the-api'>What comes back from the API?</h2>
 <p>Various text or binary response formats.</p>
 
 <p>Note: For a detailed explanation of the responses available, see the appropriate service Edition/Version Schema on this site.</p>
-<h2 id='frequently-asked-questions-can-your-email-validation-apis-find-spam-traps'>Can your email validation APIs find spam traps?</h2>
-<p>A spam trap is a moving target. In theory (and indeed in practice) anyone can setup a block List and start putting spam traps into the wild.</p>
-
-<p>Email Hippo has spam trap detection capabilities that covers several of the well known block lists. Whilst it is not possible to deliver 100% coverage of all spam traps from all block lists, Email Hippo provides the best spam trap detection capabilities available.</p>
 <h1 id='glossary'>Glossary</h1><h2 id='glossary-acl'>ACL</h2>
 <p>Access Control List.</p>
 
