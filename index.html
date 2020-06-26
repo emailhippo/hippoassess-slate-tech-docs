@@ -1,0 +1,2295 @@
+
+<!doctype html>
+<html>
+  <head>
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nn {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nl {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .ni {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .bp {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .vg {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .vi {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .w {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;json&quot;,&quot;shell&quot;,&quot;php&quot;,&quot;javascript--node&quot;,&quot;java&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;go&quot;,&quot;c&quot;,&quot;vb&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">JSON</a>
+              <a href="#" data-language-name="shell">Shell</a>
+              <a href="#" data-language-name="php">PHP</a>
+              <a href="#" data-language-name="javascript--node">Node.JS</a>
+              <a href="#" data-language-name="java">Java</a>
+              <a href="#" data-language-name="ruby">Ruby</a>
+              <a href="#" data-language-name="python">Python</a>
+              <a href="#" data-language-name="go">Go</a>
+              <a href="#" data-language-name="c">C#</a>
+              <a href="#" data-language-name="vb">.Net</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#about-email-hippo" class="toc-h1 toc-link" data-title="About Email Hippo">About Email Hippo</a>
+          </li>
+          <li>
+            <a href="#about-our-apis" class="toc-h1 toc-link" data-title="About our APIs">About our APIs</a>
+          </li>
+          <li>
+            <a href="#service-status" class="toc-h1 toc-link" data-title="Service Status ">Service Status <div style="text-align: right"><img src="images/ServiceStatus.png" width="100"></div></a>
+          </li>
+          <li>
+            <a href="#assess-visitor-api" class="toc-h1 toc-link" data-title="ASSESS Visitor API ">ASSESS Visitor API <div style="text-align: right"><img src="images/EH_ASSESS.png" width="100"></div></a>
+          </li>
+          <li>
+            <a href="#assess-edition-1" class="toc-h1 toc-link" data-title="ASSESS Edition 1">ASSESS Edition 1</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#assess-edition-1-specification" class="toc-h2 toc-link" data-title="Specification">Specification</a>
+                  </li>
+                  <li>
+                    <a href="#assess-edition-1-authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
+                  </li>
+                  <li>
+                    <a href="#assess-edition-1-endpoint-get-quota-usage" class="toc-h2 toc-link" data-title="Endpoint - GET quota usage">Endpoint - GET quota usage</a>
+                  </li>
+                  <li>
+                    <a href="#assess-edition-1-endpoint-get-assess-result" class="toc-h2 toc-link" data-title="Endpoint - GET ASSESS result">Endpoint - GET ASSESS result</a>
+                  </li>
+                  <li>
+                    <a href="#assess-edition-1-result-codes" class="toc-h2 toc-link" data-title="Result codes">Result codes</a>
+                  </li>
+                  <li>
+                    <a href="#assess-edition-1-email-hippo-trust-score-in-assess" class="toc-h2 toc-link" data-title="Email Hippo Trust Score in ASSESS">Email Hippo Trust Score in ASSESS</a>
+                  </li>
+                  <li>
+                    <a href="#assess-edition-1-net-client-libraries" class="toc-h2 toc-link" data-title=".Net client libraries">.Net client libraries</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#frequently-asked-questions" class="toc-h1 toc-link" data-title="Frequently asked questions">Frequently asked questions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#frequently-asked-questions-how-can-i-get-a-key" class="toc-h2 toc-link" data-title="How can I get a key?">How can I get a key?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-can-i-trust-you-with-my-data" class="toc-h2 toc-link" data-title="Can I trust you with my data?">Can I trust you with my data?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-will-i-get-blocklisted-using-your-apis" class="toc-h2 toc-link" data-title="Will I get blocklisted using your APIs?">Will I get blocklisted using your APIs?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-will-anyone-know-that-i-am-querying-a-domain-or-an-email-address" class="toc-h2 toc-link" data-title="Will anyone know that I am querying a domain or an email address?">Will anyone know that I am querying a domain or an email address?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-how-do-i-call-your-apis" class="toc-h2 toc-link" data-title="How do I call your APIs?">How do I call your APIs?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-does-the-system-get-slower-when-it-s-busy" class="toc-h2 toc-link" data-title="Does the system get slower when it’s busy?">Does the system get slower when it’s busy?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-do-you-cache-results" class="toc-h2 toc-link" data-title="Do you cache results?">Do you cache results?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-can-i-get-my-usage-in-real-time" class="toc-h2 toc-link" data-title="Can I get my usage in real-time?">Can I get my usage in real-time?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-how-does-the-more-api-work" class="toc-h2 toc-link" data-title="How does the MORE API work?">How does the MORE API work?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-how-does-the-whois-api-work" class="toc-h2 toc-link" data-title="How does the WHOIS API work?">How does the WHOIS API work?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-what-comes-back-from-the-api" class="toc-h2 toc-link" data-title="What comes back from the API?">What comes back from the API?</a>
+                  </li>
+                  <li>
+                    <a href="#frequently-asked-questions-can-your-email-validation-apis-find-spam-traps" class="toc-h2 toc-link" data-title="Can your email validation APIs find spam traps?">Can your email validation APIs find spam traps?</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#glossary" class="toc-h1 toc-link" data-title="Glossary">Glossary</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#glossary-acl" class="toc-h2 toc-link" data-title="ACL">ACL</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-api" class="toc-h2 toc-link" data-title="API">API</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-b2b" class="toc-h2 toc-link" data-title="B2B">B2B</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-b2c" class="toc-h2 toc-link" data-title="B2C">B2C</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-block-list" class="toc-h2 toc-link" data-title="Block list">Block list</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-bson" class="toc-h2 toc-link" data-title="BSON">BSON</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-cors" class="toc-h2 toc-link" data-title="CORS">CORS</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-ddos" class="toc-h2 toc-link" data-title="DDoS">DDoS</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-dea" class="toc-h2 toc-link" data-title="DEA">DEA</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-dns" class="toc-h2 toc-link" data-title="DNS">DNS</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-dnsbl" class="toc-h2 toc-link" data-title="DNSBL">DNSBL</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-esp" class="toc-h2 toc-link" data-title="ESP">ESP</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-free-mail" class="toc-h2 toc-link" data-title="Free mail">Free mail</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-greylisting" class="toc-h2 toc-link" data-title="Greylisting">Greylisting</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-http" class="toc-h2 toc-link" data-title="HTTP">HTTP</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-ip-address" class="toc-h2 toc-link" data-title="IP address">IP address</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-iso-3166" class="toc-h2 toc-link" data-title="ISO 3166">ISO 3166</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-json" class="toc-h2 toc-link" data-title="JSON">JSON</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-license-key" class="toc-h2 toc-link" data-title="License key">License key</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-ms" class="toc-h2 toc-link" data-title="ms">ms</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-mx" class="toc-h2 toc-link" data-title="MX">MX</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-ndr" class="toc-h2 toc-link" data-title="NDR">NDR</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-office-365" class="toc-h2 toc-link" data-title="Office 365">Office 365</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-protobuf" class="toc-h2 toc-link" data-title="protobuf">protobuf</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-punycode" class="toc-h2 toc-link" data-title="Punycode">Punycode</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-restful" class="toc-h2 toc-link" data-title="RESTful">RESTful</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-rfc" class="toc-h2 toc-link" data-title="RFC">RFC</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-role-address" class="toc-h2 toc-link" data-title="Role address">Role address</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-sla" class="toc-h2 toc-link" data-title="SLA">SLA</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-smtp" class="toc-h2 toc-link" data-title="SMTP">SMTP</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-spam-trap" class="toc-h2 toc-link" data-title="Spam trap">Spam trap</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-txt" class="toc-h2 toc-link" data-title="TXT">TXT</a>
+                  </li>
+                  <li>
+                    <a href="#glossary-xml" class="toc-h2 toc-link" data-title="XML">XML</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://signup.emailhippo.com/signup'>Sign Up for developer keys</a></li>
+            <li><a href='https://help.emailhippo.com'>Support</a></li>
+            <li><a href='https://www.emailhippo.com/compliance/terms-of-service/'>Terms of service</a></li>
+            <li><a href='https://www.emailhippo.com/compliance'>Compliance (ISO27001 and data protection legislation)</a>#</li>
+            <li><a href='https://www.emailhippo.com'>EmailHippo.com</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <p><img src="images/HeaderImage.png" alt="Email Hippo Technical Documentation" /></p>
+<h1 id='introduction'>Introduction</h1>
+<p>Welcome to the home of Email Hippo technical documents. From here you can access full information about all our APIs, view code in multiple languages and get started with your own integration. </p>
+<h1 id='about-email-hippo'>About Email Hippo</h1>
+<p>Email Hippo is an email intelligence and data services provider that’s trusted by thousands of businesses and holds international security accreditations.</p>
+
+<p>We deliver accurate cloud-based email validation and domain profiling. API use cases include data cleansing on demand or in real-time, fraud prevention and user signposting scenarios to improve user experience and build effective communication processes.</p>
+
+<p>Our monitoring and detection of disposable email addresses is unrivalled.</p>
+
+<p><a href="https://emailhippo.com">Email Hippo website</a></p>
+<h1 id='about-our-apis'>About our APIs</h1>
+<p><strong>&gt; 99.99% uptime</strong></p>
+
+<p>Fully load balanced and automatic fail-over systems dispersed across multiple data centers in multiple regions deliver enterprise-grade resilience.</p>
+
+<p><strong>Easy integration</strong></p>
+
+<p>Take a look at our enpoints and code samples to see how quick and easy it is to integrate with our services.</p>
+
+<p><strong>Fast, transparent response times</strong></p>
+
+<p>Every query response includes stopwatch data that shows the time taken to execute the request. Typical queries are answered in under 0.5 seconds.</p>
+
+<p><strong>Unrivalled performance</strong></p>
+
+<p>Strategic data centers in Europe, aggressive caching, global network delivery optimization and cloud-based auto-scaling deliver outstanding performance. </p>
+
+<p><strong>Thoughtful versioning</strong></p>
+
+<p>Endpoints are ‘versioned’ allowing the release of new functionality without forcing customers to change or break if they are committed to integrating with legacy endpoints.</p>
+<h1 id='service-status'>Service Status <div style="text-align: right"><img src="images/ServiceStatus.png" width="100" /></div></h1>
+<p>For information on the status and performance of our services visit status.emailhippo.com.</p>
+
+<p><a href="https://status.emailhippo.com/">Service Status Page</a></p>
+<h1 id='assess-visitor-api'>ASSESS Visitor API <div style="text-align: right"><img src="images/EH_ASSESS.png" width="100" /></div></h1>
+<p>ASSESS is our visitor risk assessment API. It provides base level information about your visitor based on their email address and ip address and a handy <a href="#assesshippoTrust">Email Hippo Trust Score</a> which consolidates all the information into a rating from 0 to 10.</p>
+
+<p><strong>Common features:</strong></p>
+
+<ul>
+<li><p><strong>Progressive verification</strong> using multiple verification processes including:</p>
+
+<ul>
+<li>Syntax checking</li>
+<li>DNS checking</li>
+<li>Block-list checking (e.g. spamhaus)</li>
+<li>Web infrastructure checking</li>
+<li>Mailbox checking<br></li>
+</ul></li>
+<li><p><strong>Unrivalled coverage</strong> - Email Hippo leverages the advantages of its scalable infrastructure to provide coverage of domains that are technically challenging. Consumer facing domains tend to be more challenging to cover then business facing domains B2C domains.</p></li>
+<li><p><strong>Disposable email address detection</strong> - Unrivalled disposable email address detection built on Email Hippo’s proprietary multi-vector real-time analysis:</p>
+
+<ul>
+<li>Real-time detection of disposable email address providers that employ obfuscation techniques (e.g. rotating domains, IP addresses and MX servers)</li>
+<li>Checking against static lists<br>
+&amp;nbsp<br></li>
+</ul></li>
+<li><p><strong>Gibberish detection</strong></p>
+
+<ul>
+<li>A common vector for persons wishing to remain anonymous is to register or use a pre-existing domain. Finding an available domain is not easy and as such, many opt for a ‘Gibberish’ domain such as <code>sdfre45321qaxc.com</code>.</li>
+<li>Email Hippo detects gibberish in both the user and domain elements of an email address.</li>
+</ul></li>
+<li><p><strong>Domain age</strong> - Email Hippo&#39;s WHOIS service contributes valuable domain age information to help evaluate the credibility of domains.</p></li>
+<li><p><strong>IP address</strong> - Email Hippo digs into the IP address to understand its origin and reputation.</p></li>
+<li><p><strong>Proprietary scoring and risk assessment</strong></p></li>
+</ul>
+
+<p>All the information is wrapped into our Hippo Trust Score. A simple score between 0 and 10 rates your visitor so you can decide whether and how you treat your visitor.</p>
+<p><a name="assessv1"></a></p>
+<h1 id='assess-edition-1'>ASSESS Edition 1</h1><h2 id='assess-edition-1-specification'>Specification</h2>
+<table><thead>
+<tr>
+<th>Item</th>
+<th>Spec</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Manufacturer</td>
+<td>emailhippo.com</td>
+</tr>
+<tr>
+<td>Current version</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>Uptime</td>
+<td>&gt; 99.99%</td>
+</tr>
+<tr>
+<td>Response time</td>
+<td>&gt;0.2 seconds &lt; 8 seconds. Typical response time 0.4 seconds.</td>
+</tr>
+<tr>
+<td>Throughput and concurrency</td>
+<td>220 TPS(Transactions Per Second)</td>
+</tr>
+<tr>
+<td>Security and encryption</td>
+<td>Transport security using HTTPS. Data at rest encrypted using 256-bit AES encryption.</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>RESTful GET over HTTPS, XML GET over HTTPS, BSON over HTTPS, protobuf over HTTPS</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>License key</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Geographically dispersed cloud data centers, auto load balance / failover</td>
+</tr>
+</tbody></table>
+
+<p><a name="assessconcurrency"></a></p>
+
+<p><strong>Concurrency</strong></p>
+
+<p>To preserve the operational integrity of the service to all of our customers, there is a maximum concurrency enforced by our systems.</p>
+
+<p><strong>Limits</strong></p>
+
+<p>Allowed throughput is 220 ASSESS requests per second.</p>
+
+<p>Throughput exceeding these limits will receive HTTP response code 429 (too many requests) for subsequent requests for a duration of one minute.</p>
+
+<p><strong>Suggestions on how to manage throughput</strong></p>
+
+<p>If you experience or anticipate exceeding throughput limits, here are two ways to control query rates:</p>
+
+<ul>
+<li><p>Test your integration with representative production loads over a period of time. Monitor response codes for any 429’s. If you see any 429’s please reduce the rate at which your application is querying our servers.</p></li>
+<li><p>For applications that can tolerate slight delays in your data processing mesh, consider using queuing infrastructure with a rate controllable processor. Your ‘processor’ can then schedule picking work off the queue and submitting requests to our systems at a controllable rate.</p></li>
+</ul>
+
+<p><strong>Large throughput requirement</strong></p>
+
+<p>For sustained throughput of more than 220 requests per second, please contact us about a private, dedicated service.</p>
+<h2 id='assess-edition-1-authentication'>Authentication</h2>
+<p>Email Hippo ASSESS uses API keys to allow access to the API. API keys can be managed within Hippo World.</p>
+
+<p>Email Hippo ASSESS expects the API key to be included in all API requests to the server.</p>
+
+<p><code>{k}: yourlicensekey</code></p>
+
+<aside class="notice">
+ You must replace yourlicensekey with your personal API key.
+</aside>
+<h2 id='assess-edition-1-endpoint-get-quota-usage'>Endpoint - GET quota usage</h2>
+<aside class="notice">
+Select a language tab to see a code sample.
+</aside>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># © 2017, Email Hippo Limited. (http://emailhippo.com)
+#
+# Demonstrates how to call a RESTful service @ //api.hippoassess.com/quota
+# This example requires a valid key to work correctly.
+#
+# License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+</span>
+<span class="c1"># Import the module for handling the http request
+</span><span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="c1"># The url for the service
+</span><span class="n">ApiUrl</span> <span class="o">=</span> <span class="s">"https://api.hippoassess.com/quota"</span>
+
+<span class="c1"># The format  of the full query string
+</span><span class="n">QueryFormatString</span> <span class="o">=</span> <span class="s">"{0}/{1}"</span>
+
+<span class="c1"># The API key provided for your account goes here
+</span><span class="n">YourAPIKey</span> <span class="o">=</span> <span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span>
+
+<span class="c1"># Format the full url and make the http GET request and read the response
+</span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">)).</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Print the response
+</span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="k">*</span> © 2017, Email Hippo Limited. <span class="o">(</span>http://emailhippo.com<span class="o">)</span>
+ <span class="k">*</span>
+ <span class="k">*</span> Demonstrates how to call a RESTful service @ //api.hippoassess.com/quota
+ <span class="k">*</span> This example requires a valid key to work correctly.
+ <span class="k">*</span>
+ <span class="k">*</span> License: Apache 2.0 <span class="o">(</span>https://www.apache.org/licenses/LICENSE-2.0<span class="o">)</span>
+
+curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Accept: application/json"</span> <span class="s2">"https://api.hippoassess.com/quota/YOUR_API_KEY"</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code>/*
+ * © 2017, Email Hippo Limited. (http://emailhippo.com)
+ *
+ * Demonstrates how to call a RESTful service @ //api.hippoassess.com/quota
+ * This example requires a valid key to work correctly.
+ *
+ * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+*/
+<span class="cp">&lt;?php</span>
+
+<span class="c1">// URL which should be requested</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s1">'https://api.hippoassess.com/quota'</span><span class="p">;</span>
+
+<span class="nv">$apikey</span> <span class="o">=</span> <span class="s1">'YOUR API KEY'</span><span class="p">;</span> <span class="c1">// API Key</span>
+
+
+
+<span class="c1">// jSON String for request</span>
+<span class="nv">$url</span> <span class="o">.=</span> <span class="s2">"/</span><span class="nv">$apikey</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="c1">// Initializing curl</span>
+<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span> <span class="nv">$url</span> <span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$ch</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span> <span class="p">(</span><span class="s2">"Curl failed!"</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+  <span class="c1">// Configuring curl options</span>
+  <span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'Content-type: application/json'</span><span class="p">)</span>
+  <span class="p">);</span>
+
+  <span class="c1">// Setting curl options</span>
+  <span class="nb">curl_setopt_array</span><span class="p">(</span> <span class="nv">$ch</span><span class="p">,</span> <span class="nv">$options</span> <span class="p">);</span>
+
+  <span class="c1">// Getting results</span>
+  <span class="nv">$result</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span> <span class="c1">// Getting jSON result string</span>
+
+  <span class="c1">// display JSON data</span>
+  <span class="k">echo</span> <span class="s2">"</span><span class="nv">$result</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight c tab-c"><code><span class="cm">/*
+ * © 2017, Email Hippo Limited. (http://emailhippo.com)
+ *
+ * Demonstrates how to call a RESTful service @ //api.hippoassess.com/customer/quota
+ * This example requires a valid key to work correctly.
+ *
+ * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+*/</span>
+
+<span class="cp">#region Usings
+</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">;</span>
+
+<span class="cp">#endregion
+</span>
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// The program.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="n">internal</span> <span class="n">class</span> <span class="n">Program</span>
+<span class="p">{</span>
+    <span class="cp">#region Constants
+</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// The api url.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">ApiUrl</span> <span class="o">=</span> <span class="err">@</span><span class="s">"https://api.hippoassess.com/quota"</span><span class="p">;</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 0 = ApiUrl</span>
+    <span class="c1">/// 1 = API Key</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">QueryFormatString</span> <span class="o">=</span> <span class="err">@</span><span class="s">"{0}/{1}"</span><span class="p">;</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// The your api key.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="c1">/// &lt;remarks&gt;</span>
+    <span class="c1">/// /*ENTER YOUR API KEY HERE*/</span>
+    <span class="c1">/// &lt;/remarks&gt;</span>
+    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">YourAPIKey</span> <span class="o">=</span> <span class="err">@</span><span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span><span class="p">;</span>
+
+    <span class="cp">#endregion
+</span>
+    <span class="cp">#region Methods
+</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// The main program entry point.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="c1">/// &lt;param name="args"&gt;</span>
+    <span class="c1">/// The args.</span>
+    <span class="c1">/// &lt;/param&gt;</span>
+    <span class="n">private</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">Main</span><span class="p">(</span><span class="n">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">var</span> <span class="n">requestUrl</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">,</span> <span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">);</span>
+
+        <span class="n">var</span> <span class="n">myRequest</span> <span class="o">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">requestUrl</span><span class="p">);</span>
+
+        <span class="n">WebResponse</span> <span class="n">webResponse</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+
+        <span class="n">try</span>
+        <span class="p">{</span>
+            <span class="n">webResponse</span> <span class="o">=</span> <span class="n">myRequest</span><span class="p">.</span><span class="n">GetResponse</span><span class="p">();</span>
+
+            <span class="n">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">webResponse</span><span class="p">.</span><span class="n">GetResponseStream</span><span class="p">()))</span>
+            <span class="p">{</span>
+                <span class="n">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
+
+                <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Green</span><span class="p">;</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">);</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"An error occured:"</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception reported: {0}"</span><span class="p">,</span> <span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">finally</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">webResponse</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">webResponse</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cp">#endregion
+</span><span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript--node"><code><span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">'</span><span class="s1">Accept</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span>
+
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">//api.hippoassess.com/quota/{k}</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+
+  <span class="na">headers</span><span class="p">:</span> <span class="nx">headers</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="no">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"//api.hippoassess.com/quota/{k}"</span><span class="o">);</span>
+<span class="nc">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="nc">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
+<span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
+<span class="nc">BufferedReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">InputStreamReader</span><span class="o">(</span><span class="n">con</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">()));</span>
+<span class="nc">String</span> <span class="n">inputLine</span><span class="o">;</span>
+<span class="nc">StringBuffer</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">();</span>
+<span class="k">while</span> <span class="o">((</span><span class="n">inputLine</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">response</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">inputLine</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div><div class="highlight"><pre class="highlight go tab-go"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+       <span class="s">"bytes"</span>
+       <span class="s">"net/http"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">headers</span> <span class="o">:=</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+        <span class="s">"Accept"</span><span class="o">:</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"application/json"</span><span class="p">},</span>
+
+    <span class="p">}</span>
+
+    <span class="n">data</span> <span class="o">:=</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="n">jsonReq</span><span class="p">})</span>
+    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"//api.hippoassess.com/quota/{k}"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">Header</span> <span class="o">=</span> <span class="n">headers</span>
+
+    <span class="n">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">http</span><span class="o">.</span><span class="n">Client</span><span class="p">{}</span>
+    <span class="n">resp</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+    <span class="c">// ...</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span>
+<span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'//api.hippoassess.com/quota/{k}'</span><span class="p">,</span>
+  <span class="ss">params: </span><span class="p">{</span>
+  <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
+
+<span class="nb">p</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<p>Retrieves the current usage details for a given license key.</p>
+
+<p><code>GET //api.hippoassess.com/quota/{k}</code></p>
+
+<p><em>GET QUOTA record.</em></p>
+<h3 id='assess-edition-1-endpoint-get-quota-usage-parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>k</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>the license key</td>
+</tr>
+</tbody></table>
+<h3 id='assess-edition-1-endpoint-get-quota-usage-responses-including-errors'>Responses (including errors)</h3>
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Success</td>
+<td><a href="#assessquotarecord-schema"><strong>QuotaRecord</strong></a></td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Must enter a valid license key to query or invalid format.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>No data found.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable Entity</td>
+<td>Cannot process a fully parsed respone. Top Level Domain (TLD) is not supported.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>Server error.</td>
+<td>None</td>
+</tr>
+</tbody></table>
+
+<p><a name="assessquotarecord-schema"></a></p>
+<h3 id='assess-edition-1-endpoint-get-quota-usage-quotarecord-schema'>QuotaRecord schema</h3>
+<aside class="notice">
+Select the JSON tab to view the schema in JSON.
+</aside>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"licenseKey"</span><span class="p">:</span><span class="s2">"string"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"quotaUsed"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"quotaRemaining"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"nextQuotaResetDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09T10:26:42Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reportedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09T10:26:42Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"errorSummary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td>integer(int32)</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>licenseKey</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>quotaUsed</td>
+<td>integer(int64)</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>quotaRemaining</td>
+<td>integer(int64)</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>nextQuotaResetDate</td>
+<td>datetime</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>reportedDate</td>
+<td>datetime</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>errorSummary</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody></table>
+<h2 id='assess-edition-1-endpoint-get-assess-result'>Endpoint - GET ASSESS result</h2>
+<aside class="notice">
+Select a language tab to see a code sample.
+</aside>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># © 2017, Email Hippo Limited. (http://emailhippo.com)
+#
+# Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
+# This example requires a valid key to work correctly.
+#
+# License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+</span>
+<span class="c1"># Import the module for handling the http request
+</span><span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="c1"># The url for the service
+</span><span class="n">ApiUrl</span> <span class="o">=</span> <span class="s">"https://api.hippoassess.com/v1/json"</span>
+
+<span class="c1"># The format  of the full query string
+</span><span class="n">QueryFormatString</span> <span class="o">=</span> <span class="s">"{0}/{1}/{2}"</span>
+
+<span class="c1"># The API key provided for your account goes here
+</span><span class="n">YourAPIKey</span> <span class="o">=</span> <span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span>
+
+<span class="c1"># Read in the user input
+</span><span class="n">readLine</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter Email:</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># Format the full url and make the http GET request and read the response
+</span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">,</span> <span class="n">readLine</span><span class="p">)).</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Print the response
+</span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="k">*</span> © 2017, Email Hippo Limited. <span class="o">(</span>http://emailhippo.com<span class="o">)</span>
+ <span class="k">*</span>
+ <span class="k">*</span> Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
+ <span class="k">*</span> This example requires a valid key to work correctly.
+ <span class="k">*</span>
+ <span class="k">*</span> License: Apache 2.0 <span class="o">(</span>https://www.apache.org/licenses/LICENSE-2.0<span class="o">)</span>
+
+curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Accept: application/json"</span> <span class="s2">"https://api.hippoassess.com/v1/json/YOUR_API_KEY/EMAIL_ADDRESS"</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code>/*
+ * © 2017, Email Hippo Limited. (http://emailhippo.com)
+ *
+ * Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
+ * This example requires a valid key to work correctly.
+ *
+ * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+*/
+<span class="cp">&lt;?php</span>
+
+<span class="c1">// URL which should be requested</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s1">'https://api.hippoassess.com/v1/json'</span><span class="p">;</span>
+
+<span class="nv">$apikey</span> <span class="o">=</span> <span class="s1">'YOUR API KEY'</span><span class="p">;</span> <span class="c1">// API Key</span>
+
+<span class="nv">$email</span> <span class="o">=</span> <span class="s1">'Email Address to Test'</span><span class="p">;</span> <span class="c1">// Email to test</span>
+
+<span class="c1">// jSON String for request</span>
+<span class="nv">$url</span> <span class="o">.=</span> <span class="s2">"/</span><span class="nv">$apikey</span><span class="s2">/</span><span class="nv">$email</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="c1">// Initializing curl</span>
+<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span> <span class="nv">$url</span> <span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$ch</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span> <span class="p">(</span><span class="s2">"Curl failed!"</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+  <span class="c1">// Configuring curl options</span>
+  <span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'Content-type: application/json'</span><span class="p">)</span>
+  <span class="p">);</span>
+
+  <span class="c1">// Setting curl options</span>
+  <span class="nb">curl_setopt_array</span><span class="p">(</span> <span class="nv">$ch</span><span class="p">,</span> <span class="nv">$options</span> <span class="p">);</span>
+
+  <span class="c1">// Getting results</span>
+  <span class="nv">$result</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span> <span class="c1">// Getting jSON result string</span>
+
+  <span class="c1">// display JSON data</span>
+  <span class="k">echo</span> <span class="s2">"</span><span class="nv">$result</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight c tab-c"><code><span class="cm">/*
+ * © 2017, Email Hippo Limited. (http://emailhippo.com)
+ *
+ * Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
+ * This example requires a valid key to work correctly.
+ *
+ * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+*/</span>
+
+<span class="cp">#region Usings
+</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">;</span>
+
+<span class="cp">#endregion
+</span>
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// The program.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="n">internal</span> <span class="n">class</span> <span class="n">Program</span>
+<span class="p">{</span>
+    <span class="cp">#region Constants
+</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// The api url.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">ApiUrl</span> <span class="o">=</span> <span class="err">@</span><span class="s">"https://api.hippoassess.com/v1/json"</span><span class="p">;</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 0 = ApiUrl</span>
+    <span class="c1">/// 1 = API Key</span>
+    <span class="c1">/// 2 = Email address to query</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">QueryFormatString</span> <span class="o">=</span> <span class="err">@</span><span class="s">"{0}/{1}/{2}"</span><span class="p">;</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// The your api key.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="c1">/// &lt;remarks&gt;</span>
+    <span class="c1">/// /*ENTER YOUR API KEY HERE*/</span>
+    <span class="c1">/// &lt;/remarks&gt;</span>
+    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">YourAPIKey</span> <span class="o">=</span> <span class="err">@</span><span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span><span class="p">;</span>
+
+    <span class="cp">#endregion
+</span>
+    <span class="cp">#region Methods
+</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// The main program entry point.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="c1">/// &lt;param name="args"&gt;</span>
+    <span class="c1">/// The args.</span>
+    <span class="c1">/// &lt;/param&gt;</span>
+    <span class="n">private</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">Main</span><span class="p">(</span><span class="n">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Input email address to verify"</span><span class="p">);</span>
+
+        <span class="n">var</span> <span class="n">readLine</span> <span class="o">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">);</span>
+
+        <span class="n">var</span> <span class="n">requestUrl</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">,</span> <span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">,</span> <span class="n">readLine</span><span class="p">);</span>
+
+        <span class="n">var</span> <span class="n">myRequest</span> <span class="o">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">requestUrl</span><span class="p">);</span>
+
+        <span class="n">WebResponse</span> <span class="n">webResponse</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+
+        <span class="n">try</span>
+        <span class="p">{</span>
+            <span class="n">webResponse</span> <span class="o">=</span> <span class="n">myRequest</span><span class="p">.</span><span class="n">GetResponse</span><span class="p">();</span>
+
+            <span class="n">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">webResponse</span><span class="p">.</span><span class="n">GetResponseStream</span><span class="p">()))</span>
+            <span class="p">{</span>
+                <span class="n">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
+
+                <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Green</span><span class="p">;</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">);</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"An error occured:"</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception reported: {0}"</span><span class="p">,</span> <span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">finally</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">webResponse</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">webResponse</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cp">#endregion
+</span><span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript--node"><code><span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">'</span><span class="s1">Accept</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span>
+
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">//api.hippoassess.com/v1/json/{k}/{e}</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+
+  <span class="na">headers</span><span class="p">:</span> <span class="nx">headers</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="no">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"//api.hippoassess.com/v1/json/{k}/{e}"</span><span class="o">);</span>
+<span class="nc">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="nc">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
+<span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
+<span class="nc">BufferedReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">InputStreamReader</span><span class="o">(</span><span class="n">con</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">()));</span>
+<span class="nc">String</span> <span class="n">inputLine</span><span class="o">;</span>
+<span class="nc">StringBuffer</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">();</span>
+<span class="k">while</span> <span class="o">((</span><span class="n">inputLine</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">response</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">inputLine</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div><div class="highlight"><pre class="highlight go tab-go"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+       <span class="s">"bytes"</span>
+       <span class="s">"net/http"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">headers</span> <span class="o">:=</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+        <span class="s">"Accept"</span><span class="o">:</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"application/json"</span><span class="p">},</span>
+
+    <span class="p">}</span>
+
+    <span class="n">data</span> <span class="o">:=</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="n">jsonReq</span><span class="p">})</span>
+    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"//api.hippoassess.com/v1/json/{k}/{e}"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">Header</span> <span class="o">=</span> <span class="n">headers</span>
+
+    <span class="n">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">http</span><span class="o">.</span><span class="n">Client</span><span class="p">{}</span>
+    <span class="n">resp</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+    <span class="c">// ...</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span>
+<span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'//api.hippoassess.com/v1/json/{k}/{e}'</span><span class="p">,</span>
+  <span class="ss">params: </span><span class="p">{</span>
+  <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
+
+<span class="nb">p</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<p>Performs email address verification to the full data enrichment level and returns the data in four formats:</p>
+
+<ul>
+<li><p>JSON &nbsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/json/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
+<li><p>BSON &nbsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/bson/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
+<li><p>XML &emsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/xml/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
+<li><p>Protobuf &emsp; <code>GET //api.hippoassess.com/v1/proto/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
+</ul>
+
+<p><em>GET email verification result.</em></p>
+<h3 id='assess-edition-1-endpoint-get-assess-result-parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>k</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>the license key</td>
+</tr>
+<tr>
+<td>e</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>the email address</td>
+</tr>
+<tr>
+<td>i</td>
+<td>path</td>
+<td>string</td>
+<td>false</td>
+<td>the ip address</td>
+</tr>
+<tr>
+<td>f</td>
+<td>path</td>
+<td>string</td>
+<td>false</td>
+<td>the first name</td>
+</tr>
+<tr>
+<td>l</td>
+<td>path</td>
+<td>string</td>
+<td>false</td>
+<td>the last name</td>
+</tr>
+</tbody></table>
+<h3 id='assess-edition-1-endpoint-get-assess-result-responses-including-errors'>Responses (including errors)</h3>
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Success</td>
+<td><a href="#assessresultrecord-schema"><strong>ResultRecord</strong></a></td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Bad request. The server could not understand the request. Perhaps missing a license key or an email to check? Conditions that lead to this error are: No license key supplied, no email address supplied, email address &gt; 255 characters, license key in incorrect format.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorised</td>
+<td>Possible reasons: The provided license key is not valid, the provided license key has expired, you have reached your quota capacity for this account, this account has been disabled.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too many requests</td>
+<td>Maximum processing rate exceeded. See <a href="#assessconcurrency">Concurrency</a> for further information.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>An error occurred on the server. Possible reasons are: license key validation failed or a general server fault.</td>
+<td>None</td>
+</tr>
+</tbody></table>
+
+<p><a name="assessresultrecord-schema"></a></p>
+<h3 id='assess-edition-1-endpoint-get-assess-result-result-record-schema'>Result record schema</h3>
+<aside class="notice">
+Select the JSON tab to view the schema in JSON.
+</aside>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"v"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASSESS-(0.0.1)"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://docs.hippoassess.com/"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"lastModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"expires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"emailHashMd5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"emailHashSha1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"emailHashSha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tld"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hippoTrust"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"userAnalysis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"disposition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"isGibberish"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isProfanity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"emailAddressAnalysis"</span><span class="p">:{</span><span class="w">
+        </span><span class="nl">"mailboxVerification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"syntaxVerification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"isSyntaxValid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">  
+        </span><span class="nl">"disposition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"isGibberish"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isProfanity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isRole"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isSubaddressing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isFreeMail"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasCatchAllServer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasBeenBlocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"domainAnalysis"</span><span class="p">:{</span><span class="w">
+        </span><span class="nl">"disposition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"isSubDomain"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isGibberish"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isProfanity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isDarkWeb"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasBeenBlocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasDnsRecords"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasMxRecords"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"mailServerLocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"mailServerInfrastructure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"iso8601"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"registration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"ownerContactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"ownerContactCity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"ownerContactCountry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"ipAddressAnalysis"</span><span class="p">:{</span><span class="w">
+        </span><span class="nl">"disposition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"hasBeenBlocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">      
+        </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"timeZone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"continent"</span><span class="p">:{</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"country"</span><span class="p">:{</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"city"</span><span class="p">:{</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"dataCenter"</span><span class="p">:{</span><span class="w">
+            </span><span class="nl">"autonomousSystemNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"autonomousSystemOrganization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"connectionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Version</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;v</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Contains details of the version and edition of API</td>
+</tr>
+<tr>
+<td>&emsp;doc</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Meta</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;lastModified</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Last modified date/time of Email Hippo record</td>
+</tr>
+<tr>
+<td>&emsp;expires</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Date/time that this record expires from Email Hippo cache</td>
+</tr>
+<tr>
+<td>&emsp;email</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The email being queried</td>
+</tr>
+<tr>
+<td>&emsp;emailHashMd5</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>MD5 hash of the email address</td>
+</tr>
+<tr>
+<td>&emsp;emailHashSha1</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>SHA1 hash of the email address</td>
+</tr>
+<tr>
+<td>&emsp;emailHashSha256</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>SHA265 hash of the email address</td>
+</tr>
+<tr>
+<td>&emsp;firstName</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The first name submitted</td>
+</tr>
+<tr>
+<td>&emsp;lastName</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The last name submitted</td>
+</tr>
+<tr>
+<td>&emsp;domain</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The domain of the email being queried</td>
+</tr>
+<tr>
+<td>&emsp;ip</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The ip address submitted</td>
+</tr>
+<tr>
+<td>&emsp;tld</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The Top Level Domain (TLD) of email being queried</td>
+</tr>
+<tr>
+<td><a href="#assesshippoTrust"><strong>Hippo Trust</strong></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;score</td>
+<td>decimal</td>
+<td>false</td>
+<td>none</td>
+<td>How much can I trust the person associated with this email address and ip</td>
+</tr>
+<tr>
+<td><strong>User Analysis</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;disposition</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isGibberish</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the first name or last name deemed to be gibberish text?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isProfanity</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the first name or last name deemed to be profanity?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;gender</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The gender been identified from the first name or email address</td>
+</tr>
+<tr>
+<td><strong>Email Address Analysis</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;mailboxVerification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;result</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td><a href="#assessprimarycodes">Primary result codes</a></td>
+</tr>
+<tr>
+<td>&emsp;syntaxVerification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isSyntaxValid</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the syntax of the email address correct according to RFC standards?</td>
+</tr>
+<tr>
+<td>&emsp;disposition</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isGibberish</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the email address deemed to be gibberish text?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isProfanity</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the email address deemed to be profanity?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isRole</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is a role address? (e.g. info@, sales@, postmaster@)</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isSubaddressing</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Does the email contain subaddressing i.e. + some text or (some text)</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isFreemail</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is a free mail provider? (e.g. gmail, hotmail etc)</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;hasCatchAllServer</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the mail server a catch all mail server?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;hasBeenBlocked</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the email address on a reputable block list?</td>
+</tr>
+<tr>
+<td><strong>Domain Analysis</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;disposition</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isSubDomain</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is a subdomain being used in the email address?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isGibberish</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the domain deemed to be gibberish text?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isProfanity</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the domain deemed to be profanity?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isDarkWeb</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Has the domain been associated with the Dark Web?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;hasBeenBlocked</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the domain on a reputable block list?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;hasDnsRecord</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Does the domain have any DNS records?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;hasMxRecords</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Does the domain have any MX records?</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;mailServerLocation</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Mail server location as a 2 digit ISO code (e.g. US)</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;mailServerInfrastructure</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td><a href="#assessservicetypes">Infrastructure Identifier</a> (e.g. Hotmail)</td>
+</tr>
+<tr>
+<td>&emsp;age</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;text</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Age of the domain in human readable text</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;seconds</td>
+<td>integer</td>
+<td>false</td>
+<td>none</td>
+<td>Age of the domain in seconds</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;iso8601</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Age of the domain in iso8601 format</td>
+</tr>
+<tr>
+<td>&emsp;registration</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;ownerContactName</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The domain owner&#39;s contact name</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;ownerContactCity</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The domain owner&#39;s contact city</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;ownerContactCountry</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The domain owner&#39;s contact country</td>
+</tr>
+<tr>
+<td><strong>IP Address Analysis</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;disposition</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;hasBeenBlocked</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>Is the ip address on a reputable block list?</td>
+</tr>
+<tr>
+<td>&emsp;location</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;latitude</td>
+<td>decimal</td>
+<td>false</td>
+<td>none</td>
+<td>The latitude of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;longitude</td>
+<td>decimal</td>
+<td>false</td>
+<td>none</td>
+<td>The longitude of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;timeZone</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The timeZone of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;continent</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;&emsp;code</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The 2 char code for the continent of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;&emsp;name</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The English name for the continent of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;country</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;&emsp;code</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The 2 char ISO code for the country of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;&emsp;name</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The English name for the country of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;city</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;&emsp;name</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The English name for the city of the ip address&#39;s location</td>
+</tr>
+<tr>
+<td>&emsp;dataCenter</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;autonomousSystemNumber</td>
+<td>integer</td>
+<td>false</td>
+<td>none</td>
+<td>The ASN for the data center</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;autonomousSystemOrganization</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The ASN&#39;s organisation name</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;connectionType</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The connection type (e.g. Corporate, Residential)</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;isp</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The name of the isp</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;organization</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>The isp&#39;s Organisation name</td>
+</tr>
+</tbody></table>
+
+<p><a name="assessprimarycodes"></a></p>
+<h2 id='assess-edition-1-result-codes'>Result codes</h2><h3 id='assess-edition-1-result-codes-primary-result-codes'>Primary result codes</h3>
+<table><thead>
+<tr>
+<th>Primary code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ok</td>
+<td>Verification passes all checks including Syntax, DNS, MX, Mailbox, Deep server configuration, Greylisting.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>Verification fails checks for definitive reasons (e.g. mailbox does not exist).</td>
+</tr>
+<tr>
+<td>Disposable email address</td>
+<td>The email address is provided by a well known disposable provider</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>Conclusive verification result cannot be achieved due to mail server configuration or anti-spam measures.</td>
+</tr>
+</tbody></table>
+
+<p><a name="assesshippoTrust"></a></p>
+<h2 id='assess-edition-1-email-hippo-trust-score-in-assess'>Email Hippo Trust Score in ASSESS</h2>
+<p>The Trust Score provides an ‘at a glance’ determination of quality; drilling deeper than just the email address itself.</p>
+
+<p>The Email Hippo Trust Score is designed to answer a fundamental question posed from the perspective of a business owner, merchant, data broker or lead generation service:</p>
+
+<ul>
+<li><em>How much can I trust the person associated with this email address and optionally ip address?</em></li>
+</ul>
+
+<p>The Trust Score takes dozens of metrics and signals into consideration when making this assessment and providing the final score.</p>
+
+<p><a name="assessservicetypes"></a></p>
+<h3 id='assess-edition-1-email-hippo-trust-score-in-assess-email-infrastucture-identifier'>Email Infrastucture identifier</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Other</td>
+<td>Service not of pre-defined list of known types</td>
+</tr>
+<tr>
+<td>Aol</td>
+<td>AOL</td>
+</tr>
+<tr>
+<td>Hotmail</td>
+<td>Hotmail</td>
+</tr>
+<tr>
+<td>Gmail</td>
+<td>Gmail</td>
+</tr>
+<tr>
+<td>GoogleForBiz</td>
+<td>Google for business</td>
+</tr>
+<tr>
+<td>MessageLabs</td>
+<td>Symantec message labs</td>
+</tr>
+<tr>
+<td>Net4Sec</td>
+<td>Net4Sec</td>
+</tr>
+<tr>
+<td>Office365</td>
+<td>Microsoft Office 365</td>
+</tr>
+<tr>
+<td>Yahoo</td>
+<td>Yahoo</td>
+</tr>
+<tr>
+<td>UceProtect</td>
+<td>UCE Protect</td>
+</tr>
+</tbody></table>
+<h2 id='assess-edition-1-net-client-libraries'>.Net client libraries</h2>
+<p>We have a .NET package built for easy integration with our ASSESS Edition 1 (v1) API services. For further information on the RESTful server side implementation, please see the <a href="#assessv1">docs</a> and <a href="#assessresultrecord-schema">schema</a>.</p>
+
+<p>If you&#39;re working in the .NET environment, this package can save you hours of work writing your own JSON parsers, message pumping logic, threading and logging code.</p>
+<h3 id='assess-edition-1-net-client-libraries-how-to-get-the-package'>How to get the package</h3>
+<p>The package is available from  <a rel="nofollow" target="external" href="https://www.nuget.org/packages/EmailHippo.ASSESS.Api.V1.Client/">Nuget</a>.</p>
+<h1 id='frequently-asked-questions'>Frequently asked questions</h1><h2 id='frequently-asked-questions-how-can-i-get-a-key'>How can I get a key?</h2>
+<p>Click <a href="https://register.emailhippo.com/signup">here</a> to sign up and generate a key.</p>
+<h2 id='frequently-asked-questions-can-i-trust-you-with-my-data'>Can I trust you with my data?</h2>
+<p>Great question. Yes, of course - see our <a href="https://www.emailhippo.com/compliance/">Compliance pages</a> for detailed information.</p>
+<h2 id='frequently-asked-questions-will-i-get-blocklisted-using-your-apis'>Will I get blocklisted using your APIs?</h2>
+<p>No. It’s Email Hippo infrastructure that does the work.</p>
+<h2 id='frequently-asked-questions-will-anyone-know-that-i-am-querying-a-domain-or-an-email-address'>Will anyone know that I am querying a domain or an email address?</h2>
+<p>No. It’s Email Hippo infrastructure that does the work.</p>
+<h2 id='frequently-asked-questions-how-do-i-call-your-apis'>How do I call your APIs?</h2>
+<p>For a JSON response, make a simple GET request to the endpoint.</p>
+
+<p>Read the endpoint sections for more information and take a look at the code samples, or try it out when you sign up.</p>
+<h2 id='frequently-asked-questions-does-the-system-get-slower-when-it-s-busy'>Does the system get slower when it’s busy?</h2>
+<p>No. All infrastructure is hosted in cloud based platforms with automatic scaling enabled. Automatic scaling kicks in at busy times to provide more hardware resources to meet demand.</p>
+<h2 id='frequently-asked-questions-do-you-cache-results'>Do you cache results?</h2>
+<p>To deliver the speed and reliability demanded by our customers, verification results are cached as follows:</p>
+
+<ul>
+<li><p>Level 1 cache: CloudFlare based. Cache expiration 2 hours.</p></li>
+<li><p>Level 2 cache: Microsoft Azure based - see table below</p></li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Service</th>
+<th>Cache expiration</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MORE Edition 1/V2</td>
+<td>Up to 30 days</td>
+</tr>
+<tr>
+<td>MORE Edition 2/V3</td>
+<td>Up to 30 days</td>
+</tr>
+<tr>
+<td>WHOIS Edition 1/V1</td>
+<td>Up to 90 days (depends on domain expiry in the WHOIS record).</td>
+</tr>
+</tbody></table>
+
+<p>No personally identifiable information is stored in our cache infrastructure.</p>
+<h2 id='frequently-asked-questions-can-i-get-my-usage-in-real-time'>Can I get my usage in real-time?</h2>
+<p>Usage is available in the customer portal or for MORE Edition 2/V3 use the quota API.</p>
+<h2 id='frequently-asked-questions-how-does-the-more-api-work'>How does the MORE API work?</h2>
+<p>At a basic conceptual level, the process of verifying email addresses is very simple. Google for “Send email using telnet” for a quick and general overview of how it’s done. To verify an email address without sending an email, simply go as far as the “RCPT TO” stage and parse the response code. That’s the easy bit and can be accomplished in just a couple of dozen lines of a PHP script.</p>
+
+<p>The hard bit is dealing with mail services that are intrinsically configured to work against the process of email verification or any similar <a href="#glossary-smtp">SMTP</a> based activity. The reason that any email / SMTP process is difficult from a client perspective is that mail services need to protect themselves from an ever increasing landscape of abuse including spam and <a href="#glossary-ddos">DDoS</a> attacks.</p>
+
+<p>Email Hippo‘s strength in dealing with the “hard bit” of email verification comes from years of experience in doing email verification together with our complete ownership of our SMTP verification software stack together with an extensive cloud based infrastructure. That’s why Email Hippo can do the “hard bits” best and offer outstanding coverage on the more technically challenging, dynamic domains.</p>
+<h2 id='frequently-asked-questions-how-does-the-whois-api-work'>How does the WHOIS API work?</h2>
+<p>At a basic conceptual level, the process of querying WHOIS services is very simple. First, find the authoritative WHOIS server for a particular TLD. Next, connect to the server on port 43, query the domain and capture the response.</p>
+
+<p>The hard bit is dealing with WHOIS services that are intrinsically configured to work against the process of querying domains in any form large volume scale. Additionally, the WHOIS system does not follow one, unified standard which means that the data returned from WHOIS services is very difficult to parse to anything that is useful for automation or integration purposes.</p>
+
+<p>Email Hippo’s strength in dealing with the “hard bit” of the WHOIS system comes from years of experience in solving similar challenges in email verification.</p>
+<h2 id='frequently-asked-questions-what-comes-back-from-the-api'>What comes back from the API?</h2>
+<p>Various text or binary response formats.</p>
+
+<p>Note: For a detailed explanation of the responses available, see the appropriate service Edition/Version Schema on this site.</p>
+<h2 id='frequently-asked-questions-can-your-email-validation-apis-find-spam-traps'>Can your email validation APIs find spam traps?</h2>
+<p>A spam trap is a moving target. In theory (and indeed in practice) anyone can setup a block List and start putting spam traps into the wild.</p>
+
+<p>Email Hippo has spam trap detection capabilities that covers several of the well known block lists. Whilst it is not possible to deliver 100% coverage of all spam traps from all block lists, Email Hippo provides the best spam trap detection capabilities available.</p>
+<h1 id='glossary'>Glossary</h1><h2 id='glossary-acl'>ACL</h2>
+<p>Access Control List.</p>
+
+<p>An ACL determines what networking traffic is allowed to pass and what traffic is blocked.</p>
+
+<p>An ACL change is sometimes required to your company firewall in order to access our API.</p>
+<h2 id='glossary-api'>API</h2>
+<p>Application Programmers Interface.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia - API Definition</a> for further information.</p>
+<h2 id='glossary-b2b'>B2B</h2>
+<p>Business To(2) Business</p>
+
+<p>Business email hosting services are generally private, enterprise grade hosting services typically hosted in either private data centers or in cloud based infrastructure.</p>
+
+<p>Business to business refers to the activity of businesses sending email to clients using business email addresses.</p>
+<h2 id='glossary-b2c'>B2C</h2>
+<p>Business To(2) Consumer</p>
+
+<p>Consumer email hosting providers are generally well known, mostly web based providers such as Outlook, Yahoo, AOL, Gmail etc.</p>
+
+<p>Business to consumer refers to the activity of businesses sending email to clients using consumer email addresses.</p>
+
+<p>Verifying email addresses in consumer domains is generally more technically challenging than B2B</p>
+<h2 id='glossary-block-list'>Block list</h2>
+<p>See <a href="#glossary-dnsbl">DNSBL</a>.</p>
+<h2 id='glossary-bson'>BSON</h2>
+<p>Binary Object Notation</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/BSON">Wikipedia - BSON</a> for further information.</p>
+<h2 id='glossary-cors'>CORS</h2>
+<p>Cross Origin Resource Scripting</p>
+
+<p>Allows modern browsers to work with script (e.g. JavaScript) and <a href="#glossary-json">JSON</a> data originating form other domains.</p>
+
+<p>CORS is required to allow client script such a JavaScript, jQuery or AngularJS to work with results returned from an external <a href="#glossary-restful">RESTful</a> <a href="#glossary-API">API</a>.</p>
+
+<p>See <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Wikipedia - CORS</a> for more information.</p>
+<h2 id='glossary-ddos'>DDoS</h2>
+<p>Distributed Denial of Service</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Denial-of-service_attack">Wikipedia - Denial-of-service attack</a> for further information.</p>
+<h2 id='glossary-dea'>DEA</h2>
+<p>Disposable Email Address</p>
+
+<p>There are many services available that permit users to use a one-time only email address. Typically, these email addresses are used by individuals wishing to gain access to content or services requiring registration of email addresses but same individuals not wishing to divulge their true identities (e.g. permanent email addresses).</p>
+
+<p>DEAs should not be regarded as valid for email send purposes as it is unlikely that messages sent to DEAs will ever be read.</p>
+<h2 id='glossary-dns'>DNS</h2>
+<p>Domain Name System</p>
+
+<p>At its simplest level, DNS converts text based queries (e.g. a domain name) into IP addresses.</p>
+
+<p>DNS is also responsible for providing the <a href="#glossary-mx">MX</a> records needed to locate a domains mail servers.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Domain_Name_System">Wikipedia - Domain Name System</a> for further information.</p>
+<h2 id='glossary-dnsbl'>DNSBL</h2>
+<p>DNS Block List</p>
+
+<p>As an anti-spam measure, mail servers can use spam block lists to ‘look up’ the reputation of IP addresses and domains sending email. If an IP or domain is on a block list, the mail server may reject the senders email message.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/DNSBL">Wikipedia - DNSBL</a> for further information.</p>
+<h2 id='glossary-esp'>ESP</h2>
+<p>Email Service Provider</p>
+
+<p>A service that sends emails on your behalf.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Email_service_provider_(marketing)">Wikipedia - Email service provider (marketing)</a> for more information.</p>
+<h2 id='glossary-free-mail'>Free mail</h2>
+<p>Addresses served by popular <a href="#glossary-b2c">B2C</a> service providers such as Outlook, Yahoo, Live, AOL, Gmail and so on.</p>
+<h2 id='glossary-greylisting'>Greylisting</h2>
+<p>A technique used in mail servers as an anti-spam technique. Sometimes also known as “deferred”, greylisting arbitrarily delays the delivery of emails with a “try again later” response to the client sending the email.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Greylisting">Wikipedia - Greylisting</a> for more information.</p>
+<h2 id='glossary-http'>HTTP</h2>
+<p>Hypertext Transfer Protocol</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Wikipedia - Hypertext Transfer Protocol</a> for more information.</p>
+<h2 id='glossary-ip-address'>IP address</h2>
+<p>Internet Protocol Address</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/IP_address">Wikipedia - IP Address</a> for more information.</p>
+<h2 id='glossary-iso-3166'>ISO 3166</h2>
+<p>International standard for country codes.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="http://www.iso.org/iso/country_codes">Country Codes - ISO 3166</a> for more information.</p>
+<h2 id='glossary-json'>JSON</h2>
+<p>JavaScript Object Notation</p>
+
+<p>JavaScript Object Notation, is an open standard format that uses human readable text to transmit data objects consisting of attribute value pairs. It is used primarily to transmit data between a server and web application.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/JSON">Wikipedia - JSON</a> for more information.</p>
+<h2 id='glossary-license-key'>License key</h2>
+<p>License key authentication is best for situations where simplicity is required and you can keep the key private. An ideal use case for key authentication would be for server based applications calling the  <a href="#glossary-restful">RESTful</a> <a href="#glossary-API">API</a>.</p>
+
+<p>Click <a href="https://register.emailhippo.com/signup">here</a> to sign up and access a license key.</p>
+<h2 id='glossary-ms'>ms</h2>
+<p>Milliseconds.</p>
+<h2 id='glossary-mx'>MX</h2>
+<p>Mail Exchanger</p>
+
+<p>The MX is a server responsible for email interchange with a client.</p>
+<h2 id='glossary-ndr'>NDR</h2>
+<p>Non Delivery Report</p>
+
+<p>A message that is returned to sender stating that delivery of an email address was not possible.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Bounce_message">Wikipedia - Bounce message</a> for more information.</p>
+<h2 id='glossary-office-365'>Office 365</h2>
+<p>Office 365 mail servers (e.g. x-com.mail.protection.outlook.com) are always configured with the catch all policy, accepting all emails sent to the domain and redirecting them to a central email box for manual inspection. Catch all configured servers cannot respond to requests for email address verification.</p>
+
+<p>This does not affect our coverage of Hotmail, Live and Outlook mailboxes.</p>
+<h2 id='glossary-protobuf'>protobuf</h2>
+<p>Protocol Buffers is a method of serializing structured data.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Protocol_Buffers">Wikipedia - Protocol Buffers</a> for more information.</p>
+<h2 id='glossary-punycode'>Punycode</h2>
+<p>Punycode is a way to represent Unicode with the limited character subset of ASCII supported by the Domain Name System.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Punycode">Wikipedia - Punycode</a> for more information.</p>
+<h2 id='glossary-restful'>RESTful</h2>
+<p>Representational state transfer</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Representational_state_transfer">Wikipedia - RESTful</a> for more information.</p>
+<h2 id='glossary-rfc'>RFC</h2>
+<p>Request for Comments</p>
+
+<p>The principal technical development and standards-setting bodies for The Internet.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Request_for_Comments">Wikipedia - Request for Comments</a> for more information.</p>
+<h2 id='glossary-role-address'>Role address</h2>
+<p>A role address is a generic mailbox such as info@<domain>, sales@<domain> used by organizations to manage email messages of similar organizational types. For example, email messages sent to sales@<domain> can be routed to an organizations sales team where a team of sales people can deal with enquiries.</p>
+
+<p>Role addresses allow collaborative working based on groups rather than indiviidual mailboxes.</p>
+<h2 id='glossary-sla'>SLA</h2>
+<p>Service Level Agreement</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Service-level_agreement">Wikipedia - SLA</a> for more information.</p>
+
+<p>See our <a href="https://www.emailhippo.com/compliance/terms-of-service/">Service Level Agreement</a>.</p>
+<h2 id='glossary-smtp'>SMTP</h2>
+<p>Simple Mail Transport Protocol</p>
+
+<p>SMTP is a protocol. It is the sequence of commands and responses between a client (the software sending an email) and server (the software receiving an email) that facilitates the sending and receiving of email between computer based email messaging systems.</p>
+<h2 id='glossary-spam-trap'>Spam trap</h2>
+<p>Spam traps are email addresses used for the sole purpose of detecting spamming activities.</p>
+
+<p>Spam traps are used by many block lists (<a href="#glossary-dnsbl">DNSBL</a>) to detect spammers.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/Spamtrap">Wikipedia - Spam traps</a> for more information.</p>
+<h2 id='glossary-txt'>TXT</h2>
+<p>TXT records associate arbitary and unformatted text with a domain. TXT records uses include Sender Policy Framework (SPF) and other domain validation applications.</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/TXT_record">Wikipedia - TXT record</a> for more information.</p>
+<h2 id='glossary-xml'>XML</h2>
+<p>e(X)tensible Markup Language</p>
+
+<p>See <a rel="nofollow" target="wikipedia" href="https://en.wikipedia.org/wiki/XML">Wikipedia - XML</a> for more information.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">JSON</a>
+                <a href="#" data-language-name="shell">Shell</a>
+                <a href="#" data-language-name="php">PHP</a>
+                <a href="#" data-language-name="javascript--node">Node.JS</a>
+                <a href="#" data-language-name="java">Java</a>
+                <a href="#" data-language-name="ruby">Ruby</a>
+                <a href="#" data-language-name="python">Python</a>
+                <a href="#" data-language-name="go">Go</a>
+                <a href="#" data-language-name="c">C#</a>
+                <a href="#" data-language-name="vb">.Net</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
