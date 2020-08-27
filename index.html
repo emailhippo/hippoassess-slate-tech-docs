@@ -213,7 +213,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;json&quot;,&quot;shell&quot;,&quot;php&quot;,&quot;javascript--node&quot;,&quot;java&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;go&quot;,&quot;c&quot;,&quot;vb&quot;]">
+  <body class="index" data-languages="[&quot;json&quot;,&quot;shell&quot;,&quot;php&quot;,&quot;nodejs&quot;,&quot;javascript&quot;,&quot;java&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;go&quot;,&quot;csharp&quot;,&quot;vb&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -226,12 +226,13 @@
               <a href="#" data-language-name="json">JSON</a>
               <a href="#" data-language-name="shell">Shell</a>
               <a href="#" data-language-name="php">PHP</a>
-              <a href="#" data-language-name="javascript--node">Node.JS</a>
+              <a href="#" data-language-name="nodejs">nodeJS</a>
+              <a href="#" data-language-name="javascript">JavaScript</a>
               <a href="#" data-language-name="java">Java</a>
               <a href="#" data-language-name="ruby">Ruby</a>
               <a href="#" data-language-name="python">Python</a>
               <a href="#" data-language-name="go">Go</a>
-              <a href="#" data-language-name="c">C#</a>
+              <a href="#" data-language-name="csharp">C#</a>
               <a href="#" data-language-name="vb">.Net</a>
         </div>
         <div class="search">
@@ -464,7 +465,7 @@
 
 <p><a href="https://status.emailhippo.com/">Service Status Page</a></p>
 <h1 id='assess-visitor-api'>ASSESS Visitor API <div style="text-align: right"><img src="images/EH_ASSESS.png" width="100" /></div></h1>
-<p>ASSESS is our visitor risk assessment API. It provides base level information about your visitor based on their email address and ip address and a handy <a href="#assesshippoTrust">Email Hippo Trust Score</a> which consolidates all the information into a rating from 0 to 10.</p>
+<p>The next generation of the award-winning <a href="#assesshippoTrust">Email Hippo Trust Score</a>; ASSESS is a scalable pre-fraud system for businesses from entry to enterprise levels. It delivers results via an API that’s integrated at the point where users sign-up and enter an email address. ASSESS explores the data behind every sign-up, looking for ‘tells’ and assigning a numeric level of risk to every result. The aggregated results are produced as a single Trust Score, enabling businesses to detect potentially risky sign-ups and take action accordingly. </p>
 
 <p><strong>Common features:</strong></p>
 
@@ -582,187 +583,62 @@
 <aside class="notice">
 Select a language tab to see a code sample.
 </aside>
-<div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># © 2017, Email Hippo Limited. (http://emailhippo.com)
-#
-# Demonstrates how to call a RESTful service @ //api.hippoassess.com/quota
-# This example requires a valid key to work correctly.
-#
-# License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-</span>
-<span class="c1"># Import the module for handling the http request
-</span><span class="kn">import</span> <span class="nn">urllib.request</span>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/quota/<span class="o">{</span>apiKey<span class="o">}</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Accept: application/json'</span>
 
-<span class="c1"># The url for the service
-</span><span class="n">ApiUrl</span> <span class="o">=</span> <span class="s">"https://api.hippoassess.com/quota"</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<span class="c1"># The format  of the full query string
-</span><span class="n">QueryFormatString</span> <span class="o">=</span> <span class="s">"{0}/{1}"</span>
+<span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
 
-<span class="c1"># The API key provided for your account goes here
-</span><span class="n">YourAPIKey</span> <span class="o">=</span> <span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span>
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span>
+<span class="p">);</span>
 
-<span class="c1"># Format the full url and make the http GET request and read the response
-</span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">)).</span><span class="n">read</span><span class="p">()</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
 
-<span class="c1"># Print the response
-</span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="k">*</span> © 2017, Email Hippo Limited. <span class="o">(</span>http://emailhippo.com<span class="o">)</span>
- <span class="k">*</span>
- <span class="k">*</span> Demonstrates how to call a RESTful service @ //api.hippoassess.com/quota
- <span class="k">*</span> This example requires a valid key to work correctly.
- <span class="k">*</span>
- <span class="k">*</span> License: Apache 2.0 <span class="o">(</span>https://www.apache.org/licenses/LICENSE-2.0<span class="o">)</span>
+<span class="c1">// Define array of request body.</span>
+<span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
 
-curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Accept: application/json"</span> <span class="s2">"https://api.hippoassess.com/quota/YOUR_API_KEY"</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code>/*
- * © 2017, Email Hippo Limited. (http://emailhippo.com)
- *
- * Demonstrates how to call a RESTful service @ //api.hippoassess.com/quota
- * This example requires a valid key to work correctly.
- *
- * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-*/
-<span class="cp">&lt;?php</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="s1">'https://api.hippoassess.com/v1/quota/{apiKey}'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">'headers'</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
+        <span class="s1">'json'</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
+       <span class="p">)</span>
+    <span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+ <span class="p">}</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle exception or api errors.</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+ <span class="p">}</span>
 
-<span class="c1">// URL which should be requested</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s1">'https://api.hippoassess.com/quota'</span><span class="p">;</span>
+ <span class="c1">// ...</span>
 
-<span class="nv">$apikey</span> <span class="o">=</span> <span class="s1">'YOUR API KEY'</span><span class="p">;</span> <span class="c1">// API Key</span>
+</code></pre></div><div class="highlight"><pre class="highlight plaintext"><code>const fetch = require('node-fetch');
 
+const headers = {
+  'Accept':'application/json'
+};
 
+fetch('https://api.hippoassess.com/v1/quota/{apiKey}',
+{
+  method: 'GET',
 
-<span class="c1">// jSON String for request</span>
-<span class="nv">$url</span> <span class="o">.=</span> <span class="s2">"/</span><span class="nv">$apikey</span><span class="s2">"</span><span class="p">;</span>
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
-<span class="c1">// Initializing curl</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span> <span class="nv">$url</span> <span class="p">);</span>
-
-<span class="k">if</span><span class="p">(</span><span class="nv">$ch</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">die</span> <span class="p">(</span><span class="s2">"Curl failed!"</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-
-  <span class="c1">// Configuring curl options</span>
-  <span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-    <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'Content-type: application/json'</span><span class="p">)</span>
-  <span class="p">);</span>
-
-  <span class="c1">// Setting curl options</span>
-  <span class="nb">curl_setopt_array</span><span class="p">(</span> <span class="nv">$ch</span><span class="p">,</span> <span class="nv">$options</span> <span class="p">);</span>
-
-  <span class="c1">// Getting results</span>
-  <span class="nv">$result</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span> <span class="c1">// Getting jSON result string</span>
-
-  <span class="c1">// display JSON data</span>
-  <span class="k">echo</span> <span class="s2">"</span><span class="nv">$result</span><span class="s2">"</span><span class="p">;</span>
-
-<span class="p">}</span>
-
-<span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight c tab-c"><code><span class="cm">/*
- * © 2017, Email Hippo Limited. (http://emailhippo.com)
- *
- * Demonstrates how to call a RESTful service @ //api.hippoassess.com/customer/quota
- * This example requires a valid key to work correctly.
- *
- * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-*/</span>
-
-<span class="cp">#region Usings
-</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">;</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">;</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">;</span>
-
-<span class="cp">#endregion
-</span>
-<span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// The program.</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="n">internal</span> <span class="n">class</span> <span class="n">Program</span>
-<span class="p">{</span>
-    <span class="cp">#region Constants
-</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// The api url.</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">ApiUrl</span> <span class="o">=</span> <span class="err">@</span><span class="s">"https://api.hippoassess.com/quota"</span><span class="p">;</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 0 = ApiUrl</span>
-    <span class="c1">/// 1 = API Key</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">QueryFormatString</span> <span class="o">=</span> <span class="err">@</span><span class="s">"{0}/{1}"</span><span class="p">;</span>
-
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// The your api key.</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="c1">/// &lt;remarks&gt;</span>
-    <span class="c1">/// /*ENTER YOUR API KEY HERE*/</span>
-    <span class="c1">/// &lt;/remarks&gt;</span>
-    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">YourAPIKey</span> <span class="o">=</span> <span class="err">@</span><span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span><span class="p">;</span>
-
-    <span class="cp">#endregion
-</span>
-    <span class="cp">#region Methods
-</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// The main program entry point.</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="c1">/// &lt;param name="args"&gt;</span>
-    <span class="c1">/// The args.</span>
-    <span class="c1">/// &lt;/param&gt;</span>
-    <span class="n">private</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">Main</span><span class="p">(</span><span class="n">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">var</span> <span class="n">requestUrl</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">,</span> <span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">);</span>
-
-        <span class="n">var</span> <span class="n">myRequest</span> <span class="o">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">requestUrl</span><span class="p">);</span>
-
-        <span class="n">WebResponse</span> <span class="n">webResponse</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-
-        <span class="n">try</span>
-        <span class="p">{</span>
-            <span class="n">webResponse</span> <span class="o">=</span> <span class="n">myRequest</span><span class="p">.</span><span class="n">GetResponse</span><span class="p">();</span>
-
-            <span class="n">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">webResponse</span><span class="p">.</span><span class="n">GetResponseStream</span><span class="p">()))</span>
-            <span class="p">{</span>
-                <span class="n">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
-
-                <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Green</span><span class="p">;</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"An error occured:"</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception reported: {0}"</span><span class="p">,</span> <span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="n">finally</span>
-        <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">webResponse</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">webResponse</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="cp">#endregion
-</span><span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript--node"><code><span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
-
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
 <span class="kd">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
   <span class="dl">'</span><span class="s1">Accept</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span>
-
 <span class="p">};</span>
 
-<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">//api.hippoassess.com/quota/{k}</span><span class="dl">'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.hippoassess.com/v1/quota/{apiKey}</span><span class="dl">'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
 
@@ -773,7 +649,8 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="no">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"//api.hippoassess.com/quota/{k}"</span><span class="o">);</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="no">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"https://api.hippoassess.com/v1/quota/{apiKey}"</span><span class="o">);</span>
 <span class="nc">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="nc">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -786,6 +663,29 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 <span class="o">}</span>
 <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span>
+<span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.hippoassess.com/v1/quota/{apiKey}'</span><span class="p">,</span>
+  <span class="ss">params: </span><span class="p">{</span>
+  <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
+
+<span class="nb">p</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Accept'</span><span class="p">:</span> <span class="s">'application/json'</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.hippoassess.com/v1/quota/{apiKey}'</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
+
 </code></pre></div><div class="highlight"><pre class="highlight go tab-go"><code><span class="k">package</span> <span class="n">main</span>
 
 <span class="k">import</span> <span class="p">(</span>
@@ -797,29 +697,72 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 
     <span class="n">headers</span> <span class="o">:=</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
         <span class="s">"Accept"</span><span class="o">:</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"application/json"</span><span class="p">},</span>
-
     <span class="p">}</span>
 
     <span class="n">data</span> <span class="o">:=</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="n">jsonReq</span><span class="p">})</span>
-    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"//api.hippoassess.com/quota/{k}"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"https://api.hippoassess.com/v1/quota/{apiKey}"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
     <span class="n">req</span><span class="o">.</span><span class="n">Header</span> <span class="o">=</span> <span class="n">headers</span>
 
     <span class="n">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">http</span><span class="o">.</span><span class="n">Client</span><span class="p">{}</span>
     <span class="n">resp</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
     <span class="c">// ...</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
-<span class="nb">require</span> <span class="s1">'json'</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net.Http</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net.Http.Headers</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+
+<span class="c1">/// &lt;&lt;summary&gt;&gt;</span>
+<span class="c1">/// Example of Http Client</span>
+<span class="c1">/// &lt;&lt;/summary&gt;&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">HttpExample</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="n">HttpClient</span> <span class="n">Client</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="c1">/// &lt;&lt;summary&gt;&gt;</span>
+    <span class="c1">/// Setup http client</span>
+    <span class="c1">/// &lt;&lt;/summary&gt;&gt;</span>
+    <span class="k">public</span> <span class="nf">HttpExample</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="n">Client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">HttpClient</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// Make a dummy request</span>
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">MakeGetRequest</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="kt">string</span> <span class="n">url</span> <span class="p">=</span> <span class="s">"https://api.hippoassess.com/v1/quota/{apiKey}"</span><span class="p">;</span>
+      <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="nf">GetAsync</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// Performs a GET Request</span>
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">GetAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Start the request</span>
+        <span class="n">HttpResponseMessage</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">Client</span><span class="p">.</span><span class="nf">GetAsync</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+
+        <span class="c1">//Validate result</span>
+        <span class="n">response</span><span class="p">.</span><span class="nf">EnsureSuccessStatusCode</span><span class="p">();</span>
+
+    <span class="p">}</span>
+
+
+
+
+    <span class="c1">/// Deserialize object from request response</span>
+    <span class="k">private</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeserializeObject</span><span class="p">(</span><span class="n">HttpResponseMessage</span> <span class="n">response</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Read body </span>
+        <span class="kt">string</span> <span class="n">responseBody</span> <span class="p">=</span> <span class="k">await</span> <span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="nf">ReadAsStringAsync</span><span class="p">();</span>
+
+        <span class="c1">//Deserialize Body to object</span>
+        <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="nf">DeserializeObject</span><span class="p">(</span><span class="n">responseBody</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'//api.hippoassess.com/quota/{k}'</span><span class="p">,</span>
-  <span class="ss">params: </span><span class="p">{</span>
-  <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
-
-<span class="nb">p</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <p>Retrieves the current usage details for a given license key.</p>
 
@@ -939,197 +882,62 @@ Select the JSON tab to view the schema in JSON.
 <aside class="notice">
 Select a language tab to see a code sample.
 </aside>
-<div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># © 2017, Email Hippo Limited. (http://emailhippo.com)
-#
-# Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
-# This example requires a valid key to work correctly.
-#
-# License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-</span>
-<span class="c1"># Import the module for handling the http request
-</span><span class="kn">import</span> <span class="nn">urllib.request</span>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/json/<span class="o">{</span>apiKey<span class="o">}</span>/<span class="o">{</span>emailAddress<span class="o">}</span>/<span class="o">{</span>ipAddress<span class="o">}</span>/<span class="o">{</span>firstName<span class="o">}</span>/<span class="o">{</span>lastName<span class="o">}</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Accept: application/json'</span>
 
-<span class="c1"># The url for the service
-</span><span class="n">ApiUrl</span> <span class="o">=</span> <span class="s">"https://api.hippoassess.com/v1/json"</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<span class="c1"># The format  of the full query string
-</span><span class="n">QueryFormatString</span> <span class="o">=</span> <span class="s">"{0}/{1}/{2}"</span>
+<span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
 
-<span class="c1"># The API key provided for your account goes here
-</span><span class="n">YourAPIKey</span> <span class="o">=</span> <span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span>
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span>
+<span class="p">);</span>
 
-<span class="c1"># Read in the user input
-</span><span class="n">readLine</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter Email:</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
 
-<span class="c1"># Format the full url and make the http GET request and read the response
-</span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">,</span> <span class="n">readLine</span><span class="p">)).</span><span class="n">read</span><span class="p">()</span>
+<span class="c1">// Define array of request body.</span>
+<span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
 
-<span class="c1"># Print the response
-</span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="k">*</span> © 2017, Email Hippo Limited. <span class="o">(</span>http://emailhippo.com<span class="o">)</span>
- <span class="k">*</span>
- <span class="k">*</span> Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
- <span class="k">*</span> This example requires a valid key to work correctly.
- <span class="k">*</span>
- <span class="k">*</span> License: Apache 2.0 <span class="o">(</span>https://www.apache.org/licenses/LICENSE-2.0<span class="o">)</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="s1">'https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">'headers'</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
+        <span class="s1">'json'</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
+       <span class="p">)</span>
+    <span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+ <span class="p">}</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle exception or api errors.</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+ <span class="p">}</span>
 
-curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Accept: application/json"</span> <span class="s2">"https://api.hippoassess.com/v1/json/YOUR_API_KEY/EMAIL_ADDRESS"</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code>/*
- * © 2017, Email Hippo Limited. (http://emailhippo.com)
- *
- * Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
- * This example requires a valid key to work correctly.
- *
- * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-*/
-<span class="cp">&lt;?php</span>
+ <span class="c1">// ...</span>
 
-<span class="c1">// URL which should be requested</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s1">'https://api.hippoassess.com/v1/json'</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre class="highlight plaintext"><code>const fetch = require('node-fetch');
 
-<span class="nv">$apikey</span> <span class="o">=</span> <span class="s1">'YOUR API KEY'</span><span class="p">;</span> <span class="c1">// API Key</span>
+const headers = {
+  'Accept':'application/json'
+};
 
-<span class="nv">$email</span> <span class="o">=</span> <span class="s1">'Email Address to Test'</span><span class="p">;</span> <span class="c1">// Email to test</span>
+fetch('https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}',
+{
+  method: 'GET',
 
-<span class="c1">// jSON String for request</span>
-<span class="nv">$url</span> <span class="o">.=</span> <span class="s2">"/</span><span class="nv">$apikey</span><span class="s2">/</span><span class="nv">$email</span><span class="s2">"</span><span class="p">;</span>
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
-<span class="c1">// Initializing curl</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span> <span class="nv">$url</span> <span class="p">);</span>
-
-<span class="k">if</span><span class="p">(</span><span class="nv">$ch</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">die</span> <span class="p">(</span><span class="s2">"Curl failed!"</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-
-  <span class="c1">// Configuring curl options</span>
-  <span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-    <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'Content-type: application/json'</span><span class="p">)</span>
-  <span class="p">);</span>
-
-  <span class="c1">// Setting curl options</span>
-  <span class="nb">curl_setopt_array</span><span class="p">(</span> <span class="nv">$ch</span><span class="p">,</span> <span class="nv">$options</span> <span class="p">);</span>
-
-  <span class="c1">// Getting results</span>
-  <span class="nv">$result</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span> <span class="c1">// Getting jSON result string</span>
-
-  <span class="c1">// display JSON data</span>
-  <span class="k">echo</span> <span class="s2">"</span><span class="nv">$result</span><span class="s2">"</span><span class="p">;</span>
-
-<span class="p">}</span>
-
-<span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight c tab-c"><code><span class="cm">/*
- * © 2017, Email Hippo Limited. (http://emailhippo.com)
- *
- * Demonstrates how to call a RESTful service @ //api.hippoassess.com/v1/json
- * This example requires a valid key to work correctly.
- *
- * License: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-*/</span>
-
-<span class="cp">#region Usings
-</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">;</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">;</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">;</span>
-
-<span class="cp">#endregion
-</span>
-<span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// The program.</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="n">internal</span> <span class="n">class</span> <span class="n">Program</span>
-<span class="p">{</span>
-    <span class="cp">#region Constants
-</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// The api url.</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">ApiUrl</span> <span class="o">=</span> <span class="err">@</span><span class="s">"https://api.hippoassess.com/v1/json"</span><span class="p">;</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 0 = ApiUrl</span>
-    <span class="c1">/// 1 = API Key</span>
-    <span class="c1">/// 2 = Email address to query</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">QueryFormatString</span> <span class="o">=</span> <span class="err">@</span><span class="s">"{0}/{1}/{2}"</span><span class="p">;</span>
-
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// The your api key.</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="c1">/// &lt;remarks&gt;</span>
-    <span class="c1">/// /*ENTER YOUR API KEY HERE*/</span>
-    <span class="c1">/// &lt;/remarks&gt;</span>
-    <span class="n">private</span> <span class="k">const</span> <span class="n">string</span> <span class="n">YourAPIKey</span> <span class="o">=</span> <span class="err">@</span><span class="s">"&lt;!-- ENTER A VALID KEY HERE--&gt;"</span><span class="p">;</span>
-
-    <span class="cp">#endregion
-</span>
-    <span class="cp">#region Methods
-</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// The main program entry point.</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="c1">/// &lt;param name="args"&gt;</span>
-    <span class="c1">/// The args.</span>
-    <span class="c1">/// &lt;/param&gt;</span>
-    <span class="n">private</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">Main</span><span class="p">(</span><span class="n">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Input email address to verify"</span><span class="p">);</span>
-
-        <span class="n">var</span> <span class="n">readLine</span> <span class="o">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">);</span>
-
-        <span class="n">var</span> <span class="n">requestUrl</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">QueryFormatString</span><span class="p">,</span> <span class="n">ApiUrl</span><span class="p">,</span> <span class="n">YourAPIKey</span><span class="p">,</span> <span class="n">readLine</span><span class="p">);</span>
-
-        <span class="n">var</span> <span class="n">myRequest</span> <span class="o">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">requestUrl</span><span class="p">);</span>
-
-        <span class="n">WebResponse</span> <span class="n">webResponse</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-
-        <span class="n">try</span>
-        <span class="p">{</span>
-            <span class="n">webResponse</span> <span class="o">=</span> <span class="n">myRequest</span><span class="p">.</span><span class="n">GetResponse</span><span class="p">();</span>
-
-            <span class="n">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">webResponse</span><span class="p">.</span><span class="n">GetResponseStream</span><span class="p">()))</span>
-            <span class="p">{</span>
-                <span class="n">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
-
-                <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Green</span><span class="p">;</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"An error occured:"</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="o">=</span> <span class="n">ConsoleColor</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception reported: {0}"</span><span class="p">,</span> <span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ResetColor</span><span class="p">();</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Press &lt;Enter&gt; to continue.."</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="n">finally</span>
-        <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">webResponse</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">webResponse</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="cp">#endregion
-</span><span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript--node"><code><span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
-
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
 <span class="kd">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
   <span class="dl">'</span><span class="s1">Accept</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span>
-
 <span class="p">};</span>
 
-<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">//api.hippoassess.com/v1/json/{k}/{e}</span><span class="dl">'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}</span><span class="dl">'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
 
@@ -1140,7 +948,8 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="no">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"//api.hippoassess.com/v1/json/{k}/{e}"</span><span class="o">);</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="no">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}"</span><span class="o">);</span>
 <span class="nc">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="nc">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -1153,6 +962,29 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 <span class="o">}</span>
 <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span>
+<span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}'</span><span class="p">,</span>
+  <span class="ss">params: </span><span class="p">{</span>
+  <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
+
+<span class="nb">p</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Accept'</span><span class="p">:</span> <span class="s">'application/json'</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}'</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
+
 </code></pre></div><div class="highlight"><pre class="highlight go tab-go"><code><span class="k">package</span> <span class="n">main</span>
 
 <span class="k">import</span> <span class="p">(</span>
@@ -1164,29 +996,72 @@ curl <span class="nt">-i</span> <span class="nt">-H</span> <span class="s2">"Acc
 
     <span class="n">headers</span> <span class="o">:=</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
         <span class="s">"Accept"</span><span class="o">:</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"application/json"</span><span class="p">},</span>
-
     <span class="p">}</span>
 
     <span class="n">data</span> <span class="o">:=</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="n">jsonReq</span><span class="p">})</span>
-    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"//api.hippoassess.com/v1/json/{k}/{e}"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
     <span class="n">req</span><span class="o">.</span><span class="n">Header</span> <span class="o">=</span> <span class="n">headers</span>
 
     <span class="n">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">http</span><span class="o">.</span><span class="n">Client</span><span class="p">{}</span>
     <span class="n">resp</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
     <span class="c">// ...</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
-<span class="nb">require</span> <span class="s1">'json'</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net.Http</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net.Http.Headers</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+
+<span class="c1">/// &lt;&lt;summary&gt;&gt;</span>
+<span class="c1">/// Example of Http Client</span>
+<span class="c1">/// &lt;&lt;/summary&gt;&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">HttpExample</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="n">HttpClient</span> <span class="n">Client</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="c1">/// &lt;&lt;summary&gt;&gt;</span>
+    <span class="c1">/// Setup http client</span>
+    <span class="c1">/// &lt;&lt;/summary&gt;&gt;</span>
+    <span class="k">public</span> <span class="nf">HttpExample</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="n">Client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">HttpClient</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// Make a dummy request</span>
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">MakeGetRequest</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="kt">string</span> <span class="n">url</span> <span class="p">=</span> <span class="s">"https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}"</span><span class="p">;</span>
+      <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="nf">GetAsync</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// Performs a GET Request</span>
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">GetAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Start the request</span>
+        <span class="n">HttpResponseMessage</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">Client</span><span class="p">.</span><span class="nf">GetAsync</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+
+        <span class="c1">//Validate result</span>
+        <span class="n">response</span><span class="p">.</span><span class="nf">EnsureSuccessStatusCode</span><span class="p">();</span>
+
+    <span class="p">}</span>
+
+
+
+
+    <span class="c1">/// Deserialize object from request response</span>
+    <span class="k">private</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeserializeObject</span><span class="p">(</span><span class="n">HttpResponseMessage</span> <span class="n">response</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Read body </span>
+        <span class="kt">string</span> <span class="n">responseBody</span> <span class="p">=</span> <span class="k">await</span> <span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="nf">ReadAsStringAsync</span><span class="p">();</span>
+
+        <span class="c1">//Deserialize Body to object</span>
+        <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="nf">DeserializeObject</span><span class="p">(</span><span class="n">responseBody</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'//api.hippoassess.com/v1/json/{k}/{e}'</span><span class="p">,</span>
-  <span class="ss">params: </span><span class="p">{</span>
-  <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
-
-<span class="nb">p</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <p>Performs email address verification to the full data enrichment level and returns the data in four formats:</p>
 
@@ -2345,12 +2220,13 @@ Select the JSON tab to view the schema in JSON.
                 <a href="#" data-language-name="json">JSON</a>
                 <a href="#" data-language-name="shell">Shell</a>
                 <a href="#" data-language-name="php">PHP</a>
-                <a href="#" data-language-name="javascript--node">Node.JS</a>
+                <a href="#" data-language-name="nodejs">nodeJS</a>
+                <a href="#" data-language-name="javascript">JavaScript</a>
                 <a href="#" data-language-name="java">Java</a>
                 <a href="#" data-language-name="ruby">Ruby</a>
                 <a href="#" data-language-name="python">Python</a>
                 <a href="#" data-language-name="go">Go</a>
-                <a href="#" data-language-name="c">C#</a>
+                <a href="#" data-language-name="csharp">C#</a>
                 <a href="#" data-language-name="vb">.Net</a>
           </div>
       </div>
