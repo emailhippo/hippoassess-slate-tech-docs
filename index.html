@@ -759,7 +759,7 @@ curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/quota/<span c
 </code></pre></div>
 <p>Retrieves the current usage details for a given license key.</p>
 
-<p><code>GET //api.hippoassess.com/quota/{k}</code></p>
+<p><code>GET //api.hippoassess.com/quota/{apiKey}</code></p>
 
 <p><em>GET QUOTA record.</em></p>
 <h3 id='assess-edition-1-endpoint-get-quota-usage-parameters'>Parameters</h3>
@@ -773,7 +773,7 @@ curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/quota/<span c
 </tr>
 </thead><tbody>
 <tr>
-<td>k</td>
+<td>apiKey</td>
 <td>path</td>
 <td>string</td>
 <td>true</td>
@@ -1048,10 +1048,10 @@ curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/json/<span cl
 <p>Performs email address verification to the full data enrichment level and returns the data in four formats:</p>
 
 <ul>
-<li><p>JSON &nbsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/json/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
-<li><p>BSON &nbsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/bson/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
-<li><p>XML &emsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/xml/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
-<li><p>Protobuf &emsp; <code>GET //api.hippoassess.com/v1/proto/{k}/{e}/{i?}/{f?}/{l?}</code></p></li>
+<li><p>JSON &nbsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress?}/{firstName?}/{lastName?}</code></p></li>
+<li><p>BSON &nbsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/bson/{apiKey}/{emailAddress}/{ipAddress?}/{firstName?}/{lastName?}</code></p></li>
+<li><p>XML &emsp;&emsp;&emsp; <code>GET //api.hippoassess.com/v1/xml/{apiKey}/{emailAddress}/{ipAddress?}/{firstName?}/{lastName?}</code></p></li>
+<li><p>Protobuf &emsp; <code>GET //api.hippoassess.com/v1/proto/{apiKey}/{emailAddress}/{ipAddress?}/{firstName?}/{lastName?}</code></p></li>
 </ul>
 
 <p>&nbsp;</p>
@@ -1068,35 +1068,35 @@ curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/json/<span cl
 </tr>
 </thead><tbody>
 <tr>
-<td>k</td>
+<td>apiKey</td>
 <td>path</td>
 <td>string</td>
 <td>true</td>
 <td>the license key</td>
 </tr>
 <tr>
-<td>e</td>
+<td>emailAddress</td>
 <td>path</td>
 <td>string</td>
 <td>true</td>
 <td>the email address</td>
 </tr>
 <tr>
-<td>i</td>
+<td>ipAddress</td>
 <td>path</td>
 <td>string</td>
 <td>false</td>
 <td>the ip address</td>
 </tr>
 <tr>
-<td>f</td>
+<td>firstName</td>
 <td>path</td>
 <td>string</td>
 <td>false</td>
 <td>the first name</td>
 </tr>
 <tr>
-<td>l</td>
+<td>lastName</td>
 <td>path</td>
 <td>string</td>
 <td>false</td>
@@ -1634,7 +1634,7 @@ Select the JSON tab to view the schema in JSON.
 <td>string</td>
 <td>false</td>
 <td>none</td>
-<td><a href="#assessservicetypes">Infrastructure Identifier</a> (e.g. Hotmail)</td>
+<td>Infrastructure Identifier (e.g. Hotmail, GoogleforBiz, Office365, Mimecast)</td>
 <td></td>
 </tr>
 <tr>
@@ -1940,56 +1940,6 @@ Select the JSON tab to view the schema in JSON.
 </ul>
 
 <p>The Trust Score takes dozens of metrics and signals into consideration when making this assessment and providing the final score.</p>
-
-<p><a name="assessservicetypes"></a></p>
-<h3 id='assess-edition-1-email-hippo-trust-score-email-infrastucture-identifier'>Email Infrastucture identifier</h3>
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Other</td>
-<td>Service not of pre-defined list of known types</td>
-</tr>
-<tr>
-<td>Aol</td>
-<td>AOL</td>
-</tr>
-<tr>
-<td>Hotmail</td>
-<td>Hotmail</td>
-</tr>
-<tr>
-<td>Gmail</td>
-<td>Gmail</td>
-</tr>
-<tr>
-<td>GoogleForBiz</td>
-<td>Google for business</td>
-</tr>
-<tr>
-<td>MessageLabs</td>
-<td>Symantec message labs</td>
-</tr>
-<tr>
-<td>Net4Sec</td>
-<td>Net4Sec</td>
-</tr>
-<tr>
-<td>Office365</td>
-<td>Microsoft Office 365</td>
-</tr>
-<tr>
-<td>Yahoo</td>
-<td>Yahoo</td>
-</tr>
-<tr>
-<td>UceProtect</td>
-<td>UCE Protect</td>
-</tr>
-</tbody></table>
 <h2 id='assess-edition-1-net-client-libraries'>.Net client libraries</h2>
 <p>We have a .NET package built for easy integration with our ASSESS Edition 1 (v1) API services. For further information on the RESTful server side implementation, please see the <a href="#assessv1">docs</a> and <a href="#assessresultrecord-schema">schema</a>.</p>
 
