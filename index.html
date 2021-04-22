@@ -600,22 +600,22 @@ curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/quota/<span c
     <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span>
 <span class="p">);</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="err">\</span><span class="nf">GuzzleHttp\Client</span><span class="p">();</span>
 
 <span class="c1">// Define array of request body</span>
 <span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
 
 <span class="k">try</span> <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="s1">'https://api.hippoassess.com/v1/quota/{apiKey}'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="s1">'https://api.hippoassess.com/v1/quota/{apiKey}'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">'headers'</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
         <span class="s1">'json'</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
        <span class="p">)</span>
     <span class="p">);</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="nf">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getContents</span><span class="p">());</span>
  <span class="p">}</span>
- <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="err">\</span><span class="nc">GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// handle exception or api errors.</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">());</span>
  <span class="p">}</span>
 
 <span class="cp">?&gt;</span>
@@ -892,22 +892,22 @@ curl <span class="nt">-X</span> GET https://api.hippoassess.com/v1/json/<span cl
     <span class="s1">'Accept'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span>
 <span class="p">);</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="err">\</span><span class="nf">GuzzleHttp\Client</span><span class="p">();</span>
 
 <span class="c1">// Define array of request body.</span>
 <span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
 
 <span class="k">try</span> <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="s1">'https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="s1">'https://api.hippoassess.com/v1/json/{apiKey}/{emailAddress}/{ipAddress}/{firstName}/{lastName}'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">'headers'</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
         <span class="s1">'json'</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
        <span class="p">)</span>
     <span class="p">);</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="nf">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getContents</span><span class="p">());</span>
  <span class="p">}</span>
- <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="err">\</span><span class="nc">GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// handle exception or api errors.</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">());</span>
  <span class="p">}</span>
 
 <span class="cp">?&gt;</span>
@@ -1182,7 +1182,8 @@ Select the JSON tab to view the schema in JSON.
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"emailAddressAnalysis"</span><span class="p">:{</span><span class="w">
         </span><span class="nl">"mailboxVerification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"secondaryResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"syntaxVerification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"isSyntaxValid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
@@ -1467,6 +1468,14 @@ Select the JSON tab to view the schema in JSON.
 <td>false</td>
 <td>none</td>
 <td><a href="#assessprimarycodes">Primary result codes</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;secondaryResult</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td><a href="#assesssecondarycodes">Secondary result codes</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1926,6 +1935,102 @@ Select the JSON tab to view the schema in JSON.
 <tr>
 <td>Unverifiable</td>
 <td>Conclusive verification result cannot be achieved due to mail server configuration or anti-spam measures.</td>
+</tr>
+</tbody></table>
+
+<p><a name="assesssecondarycodes"></a></p>
+<h3 id='assess-edition-1-result-codes-secondary-mailbox-result-codes'>Secondary mailbox result codes</h3>
+<table><thead>
+<tr>
+<th>Primary code</th>
+<th>Secondary reason</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ok</td>
+<td>Success</td>
+<td>Successful verification. 100% confidence that the mailbox exists.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>DomainDoesNotExist</td>
+<td>The domain (i.e. the bit after the ‘@’ character) defined in the email address does not exist, according to <a href="#glossary-dns">DNS</a> records. A domain that does not exist cannot have email boxes.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>EmailAddressFoundOnBlockLists</td>
+<td>The email address is found on one or more block lists.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>EmailContainsInternationalCharacters</td>
+<td>Email address contains international characters.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>InvalidEmailFormat</td>
+<td>Invalid email address format.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>MailboxDoesNotExist</td>
+<td>The mailbox does not exist. 100% confidence that the mail box does not exist.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>MailboxFull</td>
+<td>Mailboxes that are full are unable to receive any further email messages until such time as the user empties the mail box or the system administrator grants extra storage quota. Most full mailboxes usually indicate accounts that have been abandoned by users and will therefore never be looked at again. We do not recommend sending emails to email addresses identified as full.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>MailServerFaultDetected</td>
+<td>An unspecified mail server fault was detected.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>NoMailServersForDomain</td>
+<td>There are no mail servers defined for this domain, according to <a href="#glossary-dns">DNS</a>. Email addresses cannot be valid if there are no email servers defined in DNS for the domain.</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>PossibleSpamTrapDetected</td>
+<td>A possible spam trap email address or domain has been detected. Spam traps are email addresses or domains deliberately placed on-line in order to capture and flag potential spam based operations. Our advanced detection heuristics are capable of detecting likely spam trap addresses or domains known to be associated with spam trap techniques. We do not recommend sending emails to addresses identified as associated with known spam trap behaviour. Sending emails to known spam traps or domains will result in your <a href="#glossary-esp">ESP</a> being subjected to email blocks from a <a href="#glossary-dnsbl">DNS Block List</a>. An ESP cannot tolerate entries in a Block List (as it adversely affects email deliverability for all customers) and will actively refuse to send emails on behalf of customers with a history of generating entries in a Block List.</td>
+</tr>
+<tr>
+<td>Disposable email address</td>
+<td>DomainIsWellKnownDea</td>
+<td>The domain is a well known Disposable Email Address <a href="#glossary-dea">DEA</a>. There are many services available that permit users to use a one-time only email address. Typically, these email addresses are used by individuals wishing to gain access to content or services requiring registration of email addresses but same individuals not wishing to divulge their true identities (e.g. permanent email addresses). DEA addresses should not be regarded as valid for email send purposes as it is unlikely that messages sent to DEA addresses will ever be read.</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>MailServerAntiSpam</td>
+<td>The email server is using anti-spam measures. Anti-spam systems and processes can include: proxy based, hosted anti-spam such as ProofPoint or MimeCast; self hosted anti-spam using remote data services such as Barracuda, SORBS or SPAMCOP; and Whitelist based systems only allow emails from pre-approved sender email address. Pre-approval of sender email addresses can be done manually by the email system administrator and/or automatically via &quot;click this link&quot; to confirm your email address type opt-in emails.</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>MailServerGreyListing</td>
+<td><a href="#glossary-greylisting">Greylisting</a> is in operation. It is not possible to validate email boxes in real-time where greylisting is in operation.</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>MailServerCatchAll</td>
+<td>The server is configured for catch all and responds to all email verifications with a status of Ok. Mail servers can be configured with a policy known as Catch All. Catch all redirects any email address sent to a particular domain to a central email box for manual inspection. Catch all configured servers cannot respond to requests for email address verification.</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>None</td>
+<td>No additional information is available.</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>Timeout</td>
+<td>The remote email server timed out. Mail server is too busy / overloaded, misconfigured, offline or otherwise unavailable.</td>
+</tr>
+<tr>
+<td>Unverifiable</td>
+<td>UnpredictableSystem</td>
+<td>Unpredictable system infrastructure detected. Various email services deliver unpredictable results to email address verification. The reason for this unpredictability is that some email systems elect not to implement email standards (i.e. RFC 2821). For systems that are known to be unpredictable, we return a secondary status of &#39;UpredictableSystem&#39;.</td>
 </tr>
 </tbody></table>
 
