@@ -276,6 +276,9 @@
                     <a href="#assess-edition-1-email-hippo-trust-score" class="toc-h2 toc-link" data-title="Email Hippo Trust Score">Email Hippo Trust Score</a>
                   </li>
                   <li>
+                    <a href="#assess-edition-1-consumer-business-assessment" class="toc-h2 toc-link" data-title="Consumer Business assessment">Consumer Business assessment</a>
+                  </li>
+                  <li>
                     <a href="#assess-edition-1-net-client-libraries" class="toc-h2 toc-link" data-title=".Net client libraries">.Net client libraries</a>
                   </li>
               </ul>
@@ -497,6 +500,7 @@
 <li><p><strong>Domain age</strong> - Email Hippo&#39;s WHOIS service contributes valuable domain age information to help evaluate the credibility of domains.</p></li>
 <li><p><strong>IP address</strong> - Email Hippo digs into the IP address to understand its origin and reputation.</p></li>
 <li><p><strong>Proprietary scoring and risk assessment</strong> - All the information is wrapped into our Hippo Trust Score. A simple score between 0 and 10 rates your visitor so you can decide whether and how you treat your visitor.</p></li>
+<li><p><strong>Consumer or Business assessment</strong> - Email Hippo assesses whether the email address is likely to be from a consumer or a business and presents the result as a score from 0 to 10. The closer the score is to 0 the more likely the email address belongs to a consumer, the closer it is to 10 the more likely it is to belong to a business. </p></li>
 </ul>
 <p><a name="assessv1"></a></p>
 <h1 id='assess-edition-1'>ASSESS Edition 1</h1><h2 id='assess-edition-1-specification'>Specification</h2>
@@ -1196,6 +1200,9 @@ Select the JSON tab to view the schema in JSON.
             </span><span class="nl">"isFreeMail"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
             </span><span class="nl">"hasCatchAllServer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
             </span><span class="nl">"hasBeenBlocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"assessments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"consumerBusiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"domainAnalysis"</span><span class="p">:{</span><span class="w">
@@ -1556,6 +1563,22 @@ Select the JSON tab to view the schema in JSON.
 <td>false</td>
 <td>none</td>
 <td>Is the email address on a reputable block list?</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;assessments</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;<a href="#assessconsumerBusiness">consumerBusiness</a></td>
+<td>decimal</td>
+<td>false</td>
+<td>none</td>
+<td>Does the email address relate to a consumer or a business? Consumer 0-4, Business 6-10</td>
 <td></td>
 </tr>
 <tr>
@@ -2045,6 +2068,14 @@ Select the JSON tab to view the schema in JSON.
 </ul>
 
 <p>The Trust Score takes dozens of metrics and signals into consideration when making this assessment and providing the final score.</p>
+
+<p><a name="assessconsumerBusiness"></a></p>
+<h2 id='assess-edition-1-consumer-business-assessment'>Consumer Business assessment</h2>
+<p>The Consumer Business Assessment rates the liklihood that the email address belongs to a consumer or a business. </p>
+
+<p>The closer the score is to 0 the more likely the email address relates to a consumer.</p>
+
+<p>The closer the score is to 10 the more likely the email address relates to a business.</p>
 <h2 id='assess-edition-1-net-client-libraries'>.Net client libraries</h2>
 <p>We have a .NET package built for easy integration with our ASSESS Edition 1 (v1) API services. For further information on the RESTful server side implementation, please see the <a href="#assessv1">docs</a> and <a href="#assessresultrecord-schema">schema</a>.</p>
 
